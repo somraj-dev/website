@@ -16,25 +16,25 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       
       {/* Hero Section - Matching Oracle Health layout exactly */}
-      <section className="relative overflow-hidden text-white pt-20 pb-24 md:pt-28 md:pb-36 hero-gradient">
+      <section className="relative overflow-hidden bg-slate-900 text-white pt-20 pb-24 md:pt-28 md:pb-36 hero-gradient">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-8 space-y-6">
-              <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-500/20 border border-blue-500/30 text-blue-300 text-xs font-semibold uppercase tracking-wider">
+              <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold uppercase tracking-wider">
                 AxioVital Cloud Infrastructure
               </span>
               <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-white leading-none">
                 Reimagine the <br className="hidden sm:inline" />
-                <span className="text-blue-400">future of health</span>
+                <span className="text-blue-500">future of health</span>
               </h1>
-              <p className="text-lg sm:text-xl text-slate-200 max-w-3xl leading-relaxed">
+              <p className="text-lg sm:text-xl text-slate-350 max-w-3xl leading-relaxed">
                 Advancing how health happens by providing secure and reliable cloud solutions that help deliver better healthcare insights and people-centric experiences.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
                 <Link href="/contact" className="rounded-full bg-blue-600 px-7 py-3.5 text-sm font-bold text-white shadow-md hover:bg-blue-700 hover:shadow-lg transition-all flex items-center gap-2">
                   Request a Demo <ArrowRight className="h-4 w-4" />
                 </Link>
-                <Link href="/platform" className="rounded-full border border-slate-600 px-7 py-3.5 text-sm font-bold text-slate-200 hover:bg-slate-800/80 transition-all">
+                <Link href="/platform" className="rounded-full border border-slate-700 px-7 py-3.5 text-sm font-bold text-slate-300 hover:bg-slate-800 transition-all">
                   Explore Platform Capabilities
                 </Link>
               </div>
