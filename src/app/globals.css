@@ -2,66 +2,82 @@
 
 @layer base {
   :root {
-    --background: #f8fafc;
-    --foreground: #0f172a;
-    --primary: #2563eb;
-    --primary-hover: #1d4ed8;
-    --accent: #0284c7;
-    --success: #10b981;
-    --warning: #f59e0b;
-    --error: #ef4444;
-    --card: #ffffff;
-    --border: #e2e8f0;
+    --background: #ffffff;
+    --foreground: #1f1e1c;
+    --oracle-dark: #211f1c;
+    --oracle-yellow: #e6b738;
+    --oracle-seafoam: #eef6f6;
+    --oracle-light-blue: #e0f2fe;
+    --oracle-crimson: #c74634;
   }
 
   body {
     background-color: var(--background);
     color: var(--foreground);
-    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    overflow-x: hidden;
   }
 }
 
-/* Custom micro-animations & utilities */
-.glassmorphism {
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+/* Oracle Health Serif Headings & Italic Styling */
+.font-oracle-serif {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
-.gradient-bg {
-  background: radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.05) 0%, rgba(2, 132, 199, 0.03) 90.1%);
+/* Sub-Nav Bar Dark Background */
+.oracle-subnav-bg {
+  background-color: #211f1c;
 }
 
-.hero-gradient {
-  background: radial-gradient(circle at 50% -20%, rgba(37, 99, 235, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+/* Continuous Enterprise Healthcare Canvas System */
+.bg-hero-canvas {
+  background-color: #eef7fb;
+  background-image: 
+    radial-gradient(circle at 85% 20%, rgba(2, 132, 199, 0.09) 0%, transparent 45%),
+    radial-gradient(circle at 15% 80%, rgba(199, 70, 52, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.03) 0%, transparent 60%);
 }
 
-.card-shadow {
-  box-shadow: 0px 4px 20px -2px rgba(15, 23, 42, 0.03), 0px 2px 8px -1px rgba(15, 23, 42, 0.02);
+.bg-transition-hero-to-body {
+  background: linear-gradient(180deg, #eef7fb 0%, #f4faf9 50%, #f8fafc 100%);
 }
 
-.card-shadow-hover:hover {
-  box-shadow: 0px 20px 25px -5px rgba(15, 23, 42, 0.05), 0px 10px 10px -5px rgba(15, 23, 42, 0.03);
-  transform: translateY(-2px);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+.bg-section-offwhite {
+  background-color: #f8fafc;
+  background-image: radial-gradient(circle at 50% 0%, rgba(2, 132, 199, 0.03) 0%, transparent 60%);
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+.bg-transition-white-offwhite {
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 50%, #f6f9fc 100%);
 }
 
-::-webkit-scrollbar-track {
-  background: #f1f5f9;
+.bg-transition-offwhite-white {
+  background: linear-gradient(180deg, #f6f9fc 0%, #ffffff 100%);
 }
 
-::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 4px;
+/* Subtle Medical Dotted Pattern Background Overlay */
+.bg-medical-dots {
+  background-image: radial-gradient(rgba(148, 163, 184, 0.22) 1.2px, transparent 1.2px);
+  background-size: 28px 28px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+/* Dark Contact Button */
+.oracle-btn-dark {
+  background-color: #383431;
+  color: #ffffff;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
+.oracle-btn-dark:hover {
+  background-color: #201e1c;
+  transform: translateY(-1px);
+}
+
+/* Light Blue Nav Drawer & Popover Colors */
+.bg-light-blue-nav {
+  background-color: #f0f7ff;
+}
+
+.bg-light-blue-sidebar {
+  background-color: #e0f2fe;
+}
