@@ -114,7 +114,6 @@ export default function SupportPage() {
       {/* Top Status Banner */}
       <div className="bg-sky-50 border-b border-sky-200/80 text-sky-950">
         <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 py-2 text-xs font-medium flex items-center justify-center gap-2 flex-wrap text-center">
-          <CheckCircle2 className="h-4 w-4 text-sky-600 shrink-0" />
           <span>All AxioVital Healthcare Systems & FHIR Integration Gateways are fully operational.</span>
           <Link href="/contact?topic=status" className="underline font-bold text-sky-800 hover:text-sky-950 ml-1">
             System status page
@@ -148,7 +147,6 @@ export default function SupportPage() {
                 href="/contact?topic=ticket"
                 className="bg-white hover:bg-slate-50 border border-slate-300 text-slate-900 font-bold rounded-xl px-6 h-12 inline-flex items-center justify-center text-sm shadow-2xs transition-all hover:shadow-xs"
               >
-                <Ticket className="w-4 h-4 mr-2 text-sky-600" />
                 Submit Support Request
               </Link>
               
@@ -156,7 +154,6 @@ export default function SupportPage() {
                 href="/contact?topic=status"
                 className="bg-white hover:bg-slate-50 border border-slate-300 text-slate-900 font-bold rounded-xl px-6 h-12 inline-flex items-center justify-center text-sm shadow-2xs transition-all hover:shadow-xs"
               >
-                <Activity className="w-4 h-4 mr-2 text-sky-600" />
                 Healthcare System Status
               </Link>
 
@@ -164,25 +161,21 @@ export default function SupportPage() {
                 href="/contact?topic=emergency"
                 className="bg-white hover:bg-slate-50 border border-slate-300 text-slate-900 font-bold rounded-xl px-6 h-12 inline-flex items-center justify-center text-sm shadow-2xs transition-all hover:shadow-xs"
               >
-                <HeartPulse className="w-4 h-4 mr-2 text-sky-600" />
                 24/7 Emergency Escalation
               </Link>
             </div>
 
             {/* Centered Trust Indicators */}
             <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-600 pt-6 border-t border-slate-200/60 max-w-2xl mx-auto">
-              <span className="flex items-center gap-1.5 font-medium text-slate-800">
-                <ShieldCheck className="w-4 h-4 text-emerald-600" />
+              <span className="font-medium text-slate-800">
                 Trusted by 120+ Hospitals
               </span>
               <span>•</span>
-              <span className="flex items-center gap-1.5 font-medium text-slate-800">
-                <Clock className="w-4 h-4 text-sky-600" />
+              <span className="font-medium text-slate-800">
                 Average SLA: &lt; 15 Mins
               </span>
               <span>•</span>
-              <span className="flex items-center gap-1.5 font-medium text-slate-800">
-                <Lock className="w-4 h-4 text-slate-700" />
+              <span className="font-medium text-slate-800">
                 HIPAA & ISO 27001 Certified
               </span>
             </div>
@@ -315,9 +308,6 @@ export default function SupportPage() {
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="bg-sky-50/80 border border-sky-200/80 rounded-3xl p-8 sm:p-12 text-center shadow-2xs">
-            <div className="w-14 h-14 bg-sky-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-md shadow-sky-500/20">
-              <FileText className="w-7 h-7" />
-            </div>
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight mb-3 font-baskerville">
               Explore the AxioVital Knowledge Base
             </h2>
