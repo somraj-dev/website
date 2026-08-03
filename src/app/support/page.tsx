@@ -204,14 +204,9 @@ export default function SupportPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {quickActions.map((qa, i) => (
               <Link key={i} href={qa.href}>
-                <div className="h-full bg-white border border-slate-200/90 rounded-xl p-4 shadow-2xs hover:shadow-md hover:border-sky-400 transition-all cursor-pointer flex items-center gap-3.5">
-                  <div className="p-2.5 rounded-xl shrink-0 bg-sky-50 text-sky-600 border border-sky-100">
-                    <qa.icon className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-slate-900 text-sm font-baskerville">{qa.title}</h4>
-                    <p className="text-xs text-slate-500 mt-0.5">{qa.desc}</p>
-                  </div>
+                <div className="h-full bg-white border border-slate-200/90 rounded-xl p-4 shadow-2xs hover:shadow-md hover:border-sky-400 transition-all cursor-pointer">
+                  <h4 className="font-bold text-slate-900 text-sm font-baskerville">{qa.title}</h4>
+                  <p className="text-xs text-slate-500 mt-0.5">{qa.desc}</p>
                 </div>
               </Link>
             ))}
@@ -236,13 +231,9 @@ export default function SupportPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {categories.map((cat, idx) => {
-              const IconComponent = cat.icon;
               return (
                 <Link key={idx} href={cat.href}>
                   <div className="group relative flex flex-col h-full rounded-xl border border-slate-200/90 bg-white p-6 shadow-2xs transition-all hover:shadow-md hover:border-sky-400 hover:-translate-y-1">
-                    <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-sky-50 text-sky-600 border border-sky-100 group-hover:bg-sky-600 group-hover:text-white transition-all shadow-2xs">
-                      <IconComponent className="h-6 w-6" />
-                    </div>
                     <h3 className="mb-2 font-bold text-slate-900 text-base group-hover:text-sky-600 transition-colors font-baskerville">{cat.title}</h3>
                     <p className="text-sm text-slate-600 flex-1 leading-relaxed">{cat.description}</p>
                     <div className="mt-4 flex items-center text-xs font-bold text-sky-700 group-hover:translate-x-1 transition-transform">
@@ -270,19 +261,14 @@ export default function SupportPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {supportChannels.map((channel, i) => (
-              <div key={i} className="bg-white border border-slate-200/90 rounded-2xl p-6 shadow-2xs hover:shadow-md transition-all space-y-4">
+              <div key={i} className="bg-white border border-slate-200/90 rounded-2xl p-6 shadow-2xs hover:shadow-md transition-all space-y-3">
                 <div className="flex items-center justify-between">
-                  <div className="p-3 bg-sky-50 text-sky-600 rounded-xl border border-sky-100">
-                    <channel.icon className="w-6 h-6" />
-                  </div>
+                  <h3 className="font-bold text-slate-900 text-lg font-baskerville">{channel.title}</h3>
                   <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 border border-slate-200">
                     {channel.detail}
                   </span>
                 </div>
-                <div>
-                  <h3 className="font-bold text-slate-900 text-lg mb-1.5 font-baskerville">{channel.title}</h3>
-                  <p className="text-sm text-slate-600 leading-relaxed">{channel.desc}</p>
-                </div>
+                <p className="text-sm text-slate-600 leading-relaxed">{channel.desc}</p>
               </div>
             ))}
           </div>

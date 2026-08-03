@@ -131,9 +131,6 @@ export default function Home() {
             {/* For Patients */}
             <div className="bg-white/90 backdrop-blur-xs border border-slate-200/80 rounded-2xl p-7 hover:shadow-xl transition-all flex flex-col justify-between space-y-5">
               <div className="space-y-3">
-                <div className="h-10 w-10 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center font-bold">
-                  <UserCheck className="h-5 w-5" />
-                </div>
                 <h3 className="text-2xl font-bold text-[#1f1e1c]">For Patients</h3>
                 <p className="text-sm text-slate-600 leading-relaxed text-pretty max-w-[46ch]">
                   Book appointment slots before visiting, skip long registration queues, access digital prescriptions, view test reports online, and manage your complete medical history securely in one place.
@@ -149,9 +146,6 @@ export default function Home() {
             {/* For Doctors */}
             <div className="bg-white/90 backdrop-blur-xs border border-slate-200/80 rounded-2xl p-7 hover:shadow-xl transition-all flex flex-col justify-between space-y-5">
               <div className="space-y-3">
-                <div className="h-10 w-10 rounded-xl bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center font-bold">
-                  <Stethoscope className="h-5 w-5" />
-                </div>
                 <h3 className="text-2xl font-bold text-[#1f1e1c]">For Doctors</h3>
                 <p className="text-sm text-slate-600 leading-relaxed text-pretty max-w-[46ch]">
                   Manage patient consultation schedules efficiently, inspect complete medical history instantly, issue digital prescriptions, schedule follow-up visits, and eliminate administrative paperwork.
@@ -167,9 +161,6 @@ export default function Home() {
             {/* For Hospitals & Clinics */}
             <div className="bg-white/90 backdrop-blur-xs border border-slate-200/80 rounded-2xl p-7 hover:shadow-xl transition-all flex flex-col justify-between space-y-5">
               <div className="space-y-3">
-                <div className="h-10 w-10 rounded-xl bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center font-bold">
-                  <Building2 className="h-5 w-5" />
-                </div>
                 <h3 className="text-2xl font-bold text-[#1f1e1c]">For Hospitals & Clinics</h3>
                 <p className="text-sm text-slate-600 leading-relaxed text-pretty max-w-[46ch]">
                   Digitize patient registration, maintain electronic health records (EHR), centralize patient information, reduce waiting times, and improve inter-departmental communication.
@@ -204,21 +195,17 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
-              { title: "Online Appointment Booking", desc: "Reserve preferred doctor consultation slots from home.", icon: Calendar },
-              { title: "Queue-Free Hospital Visits", desc: "Skip reception lines with instant NFC kiosk check-in.", icon: Clock },
-              { title: "Electronic Health Records", desc: "Access complete medical history anytime across facilities.", icon: Database },
-              { title: "Digital Prescriptions", desc: "Receive e-Prescriptions directly on your phone.", icon: FileText },
-              { title: "Laboratory Integration", desc: "Automatic lab report delivery directly to your portal.", icon: Microscope },
-              { title: "Doctor Management", desc: "Streamline physician appointment schedules and charts.", icon: Stethoscope },
-              { title: "Multi-Hospital Connectivity", desc: "Unified medical record matching across healthcare networks.", icon: Activity },
-              { title: "Secure Cloud Storage", desc: "HIPAA-compliant FIPS 140-2 encrypted health records vault.", icon: Lock },
+              { title: "Online Appointment Booking", desc: "Reserve preferred doctor consultation slots from home." },
+              { title: "Queue-Free Hospital Visits", desc: "Skip reception lines with instant NFC kiosk check-in." },
+              { title: "Electronic Health Records", desc: "Access complete medical history anytime across facilities." },
+              { title: "Digital Prescriptions", desc: "Receive e-Prescriptions directly on your phone." },
+              { title: "Laboratory Integration", desc: "Automatic lab report delivery directly to your portal." },
+              { title: "Doctor Management", desc: "Streamline physician appointment schedules and charts." },
+              { title: "Multi-Hospital Connectivity", desc: "Unified medical record matching across healthcare networks." },
+              { title: "Secure Cloud Storage", desc: "HIPAA-compliant FIPS 140-2 encrypted health records vault." },
             ].map((cap, idx) => {
-              const IconComp = cap.icon;
               return (
                 <div key={idx} className="bg-white/95 border border-slate-200/80 p-5 rounded-xl space-y-2 hover:shadow-md transition-all">
-                  <div className="h-9 w-9 rounded-lg bg-sky-50 text-sky-700 flex items-center justify-center font-bold">
-                    <IconComp className="h-4 w-4" />
-                  </div>
                   <h3 className="text-base font-bold text-[#1f1e1c]">{cap.title}</h3>
                   <p className="text-xs text-slate-600 leading-relaxed">{cap.desc}</p>
                 </div>
@@ -243,20 +230,16 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { title: "AXIO-ID Token", tag: "Digital Identity", desc: "Unified digital identity token for secure single sign-on across health networks.", icon: Shield },
-              { title: "AXIO Smart Card", tag: "NFC Credential", desc: "Hardware contactless smart card for instant 1-tap clinic kiosk check-in.", icon: CreditCard },
-              { title: "AxioAI Assistant", tag: "Doctor AI Engine", desc: "Doctor documentation engine assisting physicians with consultation notes.", icon: Sparkles },
-              { title: "AxioInsights Analytics", tag: "Hospital Operations", desc: "Predictive ICU bed occupancy heatmaps and emergency ward flow analytics.", icon: BarChart3 },
-              { title: "AxioConnect Engine", tag: "EMR Gateway", desc: "High-speed integration engine linking laboratories, pharmacies, and EHR databases.", icon: Database },
-              { title: "MyHealthcare App", tag: "Patient Portal", desc: "Patient care companion app for appointment booking and report viewing.", icon: Smartphone },
+              { title: "AXIO-ID Token", tag: "Digital Identity", desc: "Unified digital identity token for secure single sign-on across health networks." },
+              { title: "AXIO Smart Card", tag: "NFC Credential", desc: "Hardware contactless smart card for instant 1-tap clinic kiosk check-in." },
+              { title: "AxioAI Assistant", tag: "Doctor AI Engine", desc: "Doctor documentation engine assisting physicians with consultation notes." },
+              { title: "AxioInsights Analytics", tag: "Hospital Operations", desc: "Predictive ICU bed occupancy heatmaps and emergency ward flow analytics." },
+              { title: "AxioConnect Engine", tag: "EMR Gateway", desc: "High-speed integration engine linking laboratories, pharmacies, and EHR databases." },
+              { title: "MyHealthcare App", tag: "Patient Portal", desc: "Patient care companion app for appointment booking and report viewing." },
             ].map((item, idx) => {
-              const IconComp = item.icon;
               return (
                 <div key={idx} className="bg-white border border-slate-200/80 p-6 rounded-2xl space-y-3 hover:shadow-lg transition-all">
                   <div className="flex justify-between items-center">
-                    <div className="h-10 w-10 rounded-xl bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center font-bold">
-                      <IconComp className="h-5 w-5" />
-                    </div>
                     <span className="text-[11px] font-bold text-sky-800 bg-sky-50 px-2.5 py-0.5 rounded border border-sky-200">{item.tag}</span>
                   </div>
                   <h3 className="text-lg font-bold text-[#1f1e1c]">{item.title}</h3>
@@ -294,29 +277,24 @@ export default function Home() {
                 { 
                   id: "hipaa", 
                   label: "HIPAA Security Rule", 
-                  desc: "FIPS 140-2 AES-256 encryption & BAA guarantees.",
-                  icon: Lock
+                  desc: "FIPS 140-2 AES-256 encryption & BAA guarantees."
                 },
                 { 
                   id: "gdpr", 
                   label: "GDPR Compliance", 
-                  desc: "Patient consent governance & data sovereignty.",
-                  icon: ShieldCheck
+                  desc: "Patient consent governance & data sovereignty."
                 },
                 { 
                   id: "soc2", 
                   label: "SOC 2 Type II", 
-                  desc: "Annual third-party security & audit verification.",
-                  icon: FileText
+                  desc: "Annual third-party security & audit verification."
                 },
                 { 
                   id: "zerotrust", 
                   label: "Zero-Trust Architecture", 
-                  desc: "Granular RBAC access & hardware SSO credentials.",
-                  icon: UserCheck
+                  desc: "Granular RBAC access & hardware SSO credentials."
                 }
               ].map((sec) => {
-                const IconComponent = sec.icon;
                 const isSelected = securityTab === sec.id;
                 return (
                   <button
@@ -328,14 +306,9 @@ export default function Home() {
                         : "bg-white border-slate-200/80 hover:border-slate-300"
                     }`}
                   >
-                    <div className="flex items-center gap-3.5">
-                      <div className="h-9 w-9 rounded-lg bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center shrink-0">
-                        <IconComponent className="h-4.5 w-4.5" />
-                      </div>
-                      <div>
-                        <div className={`text-sm font-bold ${isSelected ? "text-sky-900" : "text-slate-900"}`}>{sec.label}</div>
-                        <div className="text-xs text-slate-500 mt-0.5">{sec.desc}</div>
-                      </div>
+                    <div>
+                      <div className={`text-sm font-bold ${isSelected ? "text-sky-900" : "text-slate-900"}`}>{sec.label}</div>
+                      <div className="text-xs text-slate-500 mt-0.5">{sec.desc}</div>
                     </div>
                     <ChevronRight className={`h-4 w-4 ${isSelected ? "text-sky-600 font-bold" : "text-slate-300"}`} />
                   </button>
@@ -349,14 +322,9 @@ export default function Home() {
               <div className="space-y-4">
                 {securityTab === "hipaa" && (
                   <>
-                    <div className="flex items-center gap-3 pb-3 border-b border-slate-100">
-                      <div className="h-10 w-10 rounded-lg bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center">
-                        <ShieldCheck className="h-5 w-5" />
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-xl text-slate-900">HIPAA Physical & Technical Safeguards</h3>
-                        <p className="text-xs text-slate-500">Fully compliant with HHS 45 CFR Part 160 and Part 164</p>
-                      </div>
+                    <div className="pb-3 border-b border-slate-100">
+                      <h3 className="font-bold text-xl text-slate-900">HIPAA Physical & Technical Safeguards</h3>
+                      <p className="text-xs text-slate-500 mt-0.5">Fully compliant with HHS 45 CFR Part 160 and Part 164</p>
                     </div>
                     <p className="text-sm text-slate-600 leading-relaxed text-pretty">
                       All Protected Health Information (PHI) is encrypted at rest using FIPS 140-2 validated AES-256 keys, and in transit via TLS 1.3. Strict audit logs track all record accesses with zero-tamper verification.
@@ -365,14 +333,9 @@ export default function Home() {
                 )}
                 {securityTab === "gdpr" && (
                   <>
-                    <div className="flex items-center gap-3 pb-3 border-b border-slate-100">
-                      <div className="h-10 w-10 rounded-lg bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center">
-                        <Lock className="h-5 w-5" />
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-xl text-slate-900">EU GDPR Data Privacy & Sovereign Rights</h3>
-                        <p className="text-xs text-slate-500">Regulation (EU) 2016/679 Privacy Framework</p>
-                      </div>
+                    <div className="pb-3 border-b border-slate-100">
+                      <h3 className="font-bold text-xl text-slate-900">EU GDPR Data Privacy & Sovereign Rights</h3>
+                      <p className="text-xs text-slate-500 mt-0.5">Regulation (EU) 2016/679 Privacy Framework</p>
                     </div>
                     <p className="text-sm text-slate-600 leading-relaxed text-pretty">
                       AxioVital enforces full patient consent governance, right-to-be-forgotten data purging APIs, and regional data residency constraints within isolated sovereign data centers.
@@ -381,14 +344,9 @@ export default function Home() {
                 )}
                 {securityTab === "soc2" && (
                   <>
-                    <div className="flex items-center gap-3 pb-3 border-b border-slate-100">
-                      <div className="h-10 w-10 rounded-lg bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center">
-                        <Award className="h-5 w-5" />
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-xl text-slate-900">SOC 2 Type II Certified Operations</h3>
-                        <p className="text-xs text-slate-500">AICPA Trust Services Criteria Audit Certified</p>
-                      </div>
+                    <div className="pb-3 border-b border-slate-100">
+                      <h3 className="font-bold text-xl text-slate-900">SOC 2 Type II Certified Operations</h3>
+                      <p className="text-xs text-slate-500 mt-0.5">AICPA Trust Services Criteria Audit Certified</p>
                     </div>
                     <p className="text-sm text-slate-600 leading-relaxed text-pretty">
                       Independently audited annually to verify operational effectiveness, continuous intrusion detection monitoring, disaster recovery redundancy, and automated failover systems.
@@ -397,14 +355,9 @@ export default function Home() {
                 )}
                 {securityTab === "zerotrust" && (
                   <>
-                    <div className="flex items-center gap-3 pb-3 border-b border-slate-100">
-                      <div className="h-10 w-10 rounded-lg bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center">
-                        <Server className="h-5 w-5" />
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-xl text-slate-900">Zero-Trust Network & Credential Architecture</h3>
-                        <p className="text-xs text-slate-500">NIST SP 800-207 Zero Trust Standard</p>
-                      </div>
+                    <div className="pb-3 border-b border-slate-100">
+                      <h3 className="font-bold text-xl text-slate-900">Zero-Trust Network & Credential Architecture</h3>
+                      <p className="text-xs text-slate-500 mt-0.5">NIST SP 800-207 Zero Trust Standard</p>
                     </div>
                     <p className="text-sm text-slate-600 leading-relaxed text-pretty">
                       No implicit trust granted to any internal user or system. Micro-segmentation, hardware NFC key verification, and role-based access control (RBAC) ensure total security.
@@ -416,42 +369,22 @@ export default function Home() {
               {/* Classic Technical Specification Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4 border-t border-slate-100">
                 <div className="bg-slate-50/80 border border-slate-200/70 rounded-lg p-3.5 space-y-1.5">
-                  <div className="flex items-center gap-2">
-                    <div className="h-7 w-7 rounded-md bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center">
-                      <Key className="h-3.5 w-3.5" />
-                    </div>
-                    <span className="text-xs font-bold text-slate-900">Data Encryption</span>
-                  </div>
+                  <span className="text-xs font-bold text-slate-900 block">Data Encryption</span>
                   <p className="text-[11px] text-slate-500 leading-tight">AES-256 & TLS 1.3 encryption for all data</p>
                 </div>
 
                 <div className="bg-slate-50/80 border border-slate-200/70 rounded-lg p-3.5 space-y-1.5">
-                  <div className="flex items-center gap-2">
-                    <div className="h-7 w-7 rounded-md bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center">
-                      <CheckCircle2 className="h-3.5 w-3.5" />
-                    </div>
-                    <span className="text-xs font-bold text-slate-900">Access Control</span>
-                  </div>
+                  <span className="text-xs font-bold text-slate-900 block">Access Control</span>
                   <p className="text-[11px] text-slate-500 leading-tight">Role-based access with least-privilege rules</p>
                 </div>
 
                 <div className="bg-slate-50/80 border border-slate-200/70 rounded-lg p-3.5 space-y-1.5">
-                  <div className="flex items-center gap-2">
-                    <div className="h-7 w-7 rounded-md bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center">
-                      <Eye className="h-3.5 w-3.5" />
-                    </div>
-                    <span className="text-xs font-bold text-slate-900">Audit Logging</span>
-                  </div>
+                  <span className="text-xs font-bold text-slate-900 block">Audit Logging</span>
                   <p className="text-[11px] text-slate-500 leading-tight">Immutable audit trails for system compliance</p>
                 </div>
 
                 <div className="bg-slate-50/80 border border-slate-200/70 rounded-lg p-3.5 space-y-1.5">
-                  <div className="flex items-center gap-2">
-                    <div className="h-7 w-7 rounded-md bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center">
-                      <HardDrive className="h-3.5 w-3.5" />
-                    </div>
-                    <span className="text-xs font-bold text-slate-900">Secure Infra</span>
-                  </div>
+                  <span className="text-xs font-bold text-slate-900 block">Secure Infra</span>
                   <p className="text-[11px] text-slate-500 leading-tight">HIPAA-aligned cloud with 99.99% uptime SLA</p>
                 </div>
               </div>
