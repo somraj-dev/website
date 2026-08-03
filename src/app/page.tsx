@@ -17,8 +17,8 @@ export default function Home() {
     <div className="flex flex-col min-h-screen bg-white font-sans text-[#1f1e1c] selection:bg-[#c74634] selection:text-white">
       
       {/* BREADCRUMB BAR */}
-      <div className="bg-[#eef7fb] py-2 px-4 sm:px-8 text-xs text-[#595652] font-medium relative z-10">
-        <div className="mx-auto max-w-7xl flex items-center gap-1.5">
+      <div className="bg-[#eef7fb] py-2 px-4 sm:px-6 lg:px-8 text-xs text-[#595652] font-medium relative z-10">
+        <div className="mx-auto max-w-[1440px] flex items-center gap-1.5">
           <Link href="/" className="hover:underline">AxioVital India</Link>
           <ChevronRight className="h-3 w-3 text-slate-400" />
           <span className="text-slate-800">Integrated Digital Healthcare Platform</span>
@@ -32,7 +32,7 @@ export default function Home() {
         <div className="absolute top-2 right-10 w-96 h-96 bg-sky-300/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-10 w-80 h-80 bg-red-400/5 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="mx-auto max-w-7xl px-4 sm:px-8 relative z-10">
+        <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
             {/* Left Column: Original AxioVital Copy */}
@@ -41,24 +41,25 @@ export default function Home() {
                 Connected Healthcare Ecosystem
               </span>
 
-              <h1 className="font-oracle-serif italic text-4xl sm:text-5xl lg:text-6xl font-normal text-[#1f1e1c] leading-[1.12] tracking-tight">
-                Transforming Healthcare Through Intelligent Digital Care
+              <h1 className="font-baskerville text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-[1.2] tracking-tight">
+                Axiovital Health Service and Tech Authority
               </h1>
 
-              <p className="text-sm sm:text-base text-[#383431] leading-relaxed max-w-xl font-normal">
-                AxioVital is an integrated healthcare platform that connects patients, healthcare providers, hospitals, and clinics through a secure digital ecosystem. From online appointment booking and electronic health records to digital prescriptions and streamlined hospital operations, AxioVital helps deliver faster, more efficient, and patient-centered healthcare experiences.
+              {/* Clean Subtitle with Controlled Line Length */}
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed text-pretty max-w-[55ch] font-normal">
+                AxioVital is an integrated healthcare platform connecting patients, doctors, hospitals, clinics, and laboratories through a unified digital operating system. Streamline online appointment booking, electronic health records (EHR), digital prescriptions, and hospital workflows seamlessly.
               </p>
 
-              <div className="flex flex-wrap items-center gap-4 pt-1">
+              <div className="flex flex-wrap items-center gap-4 pt-3">
                 <button 
                   onClick={() => setDemoModalOpen(true)}
-                  className="oracle-btn-dark px-7 py-3.5 text-sm font-bold rounded-md shadow-sm inline-flex items-center gap-2"
+                  className="btn-primary"
                 >
                   Book an Appointment
                 </button>
                 <Link 
                   href="/platform" 
-                  className="border border-slate-300 bg-white/90 hover:bg-white text-slate-800 px-7 py-3.5 text-sm font-bold rounded-md transition-all shadow-2xs"
+                  className="btn-secondary"
                 >
                   Explore Our Platform
                 </Link>
@@ -67,7 +68,7 @@ export default function Home() {
 
             {/* Right Column: Healthcare Video Visual Card */}
             <div className="lg:col-span-5">
-              <div className="rounded-2xl overflow-hidden shadow-xl border border-slate-200/80 bg-[#0d4253] max-w-lg mx-auto">
+              <div className="rounded-2xl overflow-hidden shadow-xl border border-slate-200/80 bg-[#0d4253] w-full">
                 <div className="relative aspect-4/3 w-full bg-[#0d4253] overflow-hidden group cursor-pointer" onClick={() => setDemoModalOpen(true)}>
                   <img 
                     src="/oracle_hero_doctor.jpg" 
@@ -110,15 +111,15 @@ export default function Home() {
       </section>
 
       {/* SECTION 2: HOW AXIOVITAL SIMPLIFIES HEALTHCARE */}
-      <section className="bg-transition-hero-to-body py-8 sm:py-12 relative overflow-hidden">
+      <section className="bg-transition-hero-to-body py-16 lg:py-24 relative overflow-hidden">
         
         {/* Soft Background Wave Overlay */}
         <div className="absolute top-0 inset-x-0 h-20 bg-gradient-to-b from-[#eef7fb]/60 to-transparent pointer-events-none" />
 
-        <div className="mx-auto max-w-7xl px-4 sm:px-8 space-y-8 relative z-10">
+        <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 space-y-8 relative z-10">
           <div className="max-w-3xl">
             <span className="text-xs font-bold text-sky-800 uppercase tracking-wider block mb-1">Empowering the Entire Health Spectrum</span>
-            <h2 className="font-oracle-serif italic text-3xl sm:text-4xl font-normal text-[#1f1e1c] leading-tight">
+            <h2 className="font-sans font-semibold text-3xl sm:text-4xl text-slate-900 leading-tight">
               How AxioVital Simplifies Healthcare
             </h2>
             <p className="text-slate-600 text-sm sm:text-base mt-2 leading-relaxed">
@@ -134,7 +135,7 @@ export default function Home() {
                   <UserCheck className="h-5 w-5" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#1f1e1c]">For Patients</h3>
-                <p className="text-sm text-slate-600 leading-relaxed">
+                <p className="text-sm text-slate-600 leading-relaxed text-pretty max-w-[46ch]">
                   Book appointment slots before visiting, skip long registration queues, access digital prescriptions, view test reports online, and manage your complete medical history securely in one place.
                 </p>
               </div>
@@ -148,11 +149,11 @@ export default function Home() {
             {/* For Doctors */}
             <div className="bg-white/90 backdrop-blur-xs border border-slate-200/80 rounded-2xl p-7 hover:shadow-xl transition-all flex flex-col justify-between space-y-5">
               <div className="space-y-3">
-                <div className="h-10 w-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center font-bold">
+                <div className="h-10 w-10 rounded-xl bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center font-bold">
                   <Stethoscope className="h-5 w-5" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#1f1e1c]">For Doctors</h3>
-                <p className="text-sm text-slate-600 leading-relaxed">
+                <p className="text-sm text-slate-600 leading-relaxed text-pretty max-w-[46ch]">
                   Manage patient consultation schedules efficiently, inspect complete medical history instantly, issue digital prescriptions, schedule follow-up visits, and eliminate administrative paperwork.
                 </p>
               </div>
@@ -166,11 +167,11 @@ export default function Home() {
             {/* For Hospitals & Clinics */}
             <div className="bg-white/90 backdrop-blur-xs border border-slate-200/80 rounded-2xl p-7 hover:shadow-xl transition-all flex flex-col justify-between space-y-5">
               <div className="space-y-3">
-                <div className="h-10 w-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold">
+                <div className="h-10 w-10 rounded-xl bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center font-bold">
                   <Building2 className="h-5 w-5" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#1f1e1c]">For Hospitals & Clinics</h3>
-                <p className="text-sm text-slate-600 leading-relaxed">
+                <p className="text-sm text-slate-600 leading-relaxed text-pretty max-w-[46ch]">
                   Digitize patient registration, maintain electronic health records (EHR), centralize patient information, reduce waiting times, and improve inter-departmental communication.
                 </p>
               </div>
@@ -185,15 +186,15 @@ export default function Home() {
       </section>
 
       {/* SECTION 3: CORE CAPABILITIES MATRIX */}
-      <section className="bg-[#f8fafc] bg-medical-dots py-8 sm:py-12 relative overflow-hidden">
+      <section className="bg-[#f8fafc] bg-medical-dots py-16 lg:py-24 relative overflow-hidden">
         
         {/* Subtle Ambient Radial Overlay */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-sky-200/10 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="mx-auto max-w-7xl px-4 sm:px-8 space-y-8 relative z-10">
+        <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 space-y-8 relative z-10">
           <div>
             <span className="text-xs font-bold text-sky-800 uppercase tracking-wider block mb-1">Integrated Platform Features</span>
-            <h2 className="font-oracle-serif italic text-3xl sm:text-4xl font-normal text-[#1f1e1c]">
+            <h2 className="font-sans font-semibold text-3xl sm:text-4xl text-slate-900">
               Comprehensive Care Capabilities
             </h2>
             <p className="text-slate-600 text-sm mt-1 max-w-2xl">
@@ -228,11 +229,11 @@ export default function Home() {
       </section>
 
       {/* SECTION 4: AXIOVITAL PRODUCT SUITE */}
-      <section className="bg-transition-white-offwhite py-8 sm:py-12 relative overflow-hidden">
-        <div className="mx-auto max-w-7xl px-4 sm:px-8 space-y-8 relative z-10">
+      <section className="bg-transition-white-offwhite py-16 lg:py-24 relative overflow-hidden">
+        <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 space-y-8 relative z-10">
           <div>
             <span className="text-xs font-bold text-sky-800 uppercase tracking-wider block mb-1">Hardware & AI Innovations</span>
-            <h2 className="font-oracle-serif italic text-3xl sm:text-4xl font-normal text-[#1f1e1c]">
+            <h2 className="font-sans font-semibold text-3xl sm:text-4xl text-slate-900">
               AxioVital Integrated Product Suite
             </h2>
             <p className="text-slate-600 text-sm mt-1">
@@ -253,8 +254,10 @@ export default function Home() {
               return (
                 <div key={idx} className="bg-white border border-slate-200/80 p-6 rounded-2xl space-y-3 hover:shadow-lg transition-all">
                   <div className="flex justify-between items-center">
-                    <IconComp className="h-6 w-6 text-[#c74634]" />
-                    <span className="text-[11px] font-bold text-slate-600 bg-slate-100 px-2.5 py-0.5 rounded border border-slate-200">{item.tag}</span>
+                    <div className="h-10 w-10 rounded-xl bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center font-bold">
+                      <IconComp className="h-5 w-5" />
+                    </div>
+                    <span className="text-[11px] font-bold text-sky-800 bg-sky-50 px-2.5 py-0.5 rounded border border-sky-200">{item.tag}</span>
                   </div>
                   <h3 className="text-lg font-bold text-[#1f1e1c]">{item.title}</h3>
                   <p className="text-xs text-slate-600 leading-relaxed">{item.desc}</p>
@@ -265,56 +268,52 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 5: ENTERPRISE SECURITY & COMPLIANCE (100% MATCH OF SECOND SCREENSHOT) */}
-      <section className="py-12 sm:py-16 bg-[#f8fafc] bg-medical-dots relative overflow-hidden">
-        <div className="mx-auto max-w-7xl px-4 sm:px-8 space-y-8 relative z-10">
+      {/* SECTION 5: ENTERPRISE SECURITY & COMPLIANCE */}
+      <section className="py-16 lg:py-24 bg-white border-t border-slate-200/80 relative overflow-hidden">
+        <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 space-y-10 relative z-10">
           
           {/* Header */}
           <div className="max-w-3xl space-y-3">
-            <span className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-700 bg-sky-50 border border-sky-200 px-3.5 py-1 rounded-full shadow-2xs">
+            <span className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-800 bg-sky-50 border border-sky-200 px-3.5 py-1 rounded-full">
               <ShieldCheck className="h-4 w-4 text-sky-600" />
               ENTERPRISE HEALTHCARE VAULT
             </span>
-            <h2 className="font-oracle-serif italic text-3xl sm:text-4xl lg:text-5xl font-normal text-[#1f1e1c]">
+            <h2 className="font-sans font-semibold text-3xl sm:text-4xl text-slate-900">
               Enterprise Security & Compliance
             </h2>
-            <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-              AxioVital protects patient data with industry-leading security, continuous compliance monitoring, and enterprise-grade infrastructure built for healthcare's highest standards.
+            <p className="text-slate-600 text-sm sm:text-base leading-relaxed text-pretty max-w-[60ch]">
+              AxioVital protects patient data with bank-grade encryption, continuous regulatory compliance monitoring, and enterprise infrastructure built to HIPAA and GDPR standards.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             
-            {/* Left Navigation Cards Column */}
-            <div className="lg:col-span-5 space-y-3.5">
+            {/* Left Navigation Cards Column (Classic Enterprise Menu) */}
+            <div className="lg:col-span-4 space-y-2">
               {[
                 { 
                   id: "hipaa", 
                   label: "HIPAA Security Rule", 
-                  desc: "256-bit AES encryption & BAAs.",
-                  icon: Lock,
-                  iconBg: "bg-sky-50 text-sky-600"
+                  desc: "FIPS 140-2 AES-256 encryption & BAA guarantees.",
+                  icon: Lock
                 },
                 { 
                   id: "gdpr", 
                   label: "GDPR Compliance", 
-                  desc: "Patient data sovereignty & consent.",
-                  icon: ShieldCheck,
-                  iconBg: "bg-emerald-50 text-emerald-600"
+                  desc: "Patient consent governance & data sovereignty.",
+                  icon: ShieldCheck
                 },
                 { 
                   id: "soc2", 
                   label: "SOC 2 Type II", 
-                  desc: "Annual independent security audits.",
-                  icon: FileText,
-                  iconBg: "bg-[#f0eefe] text-purple-600"
+                  desc: "Annual third-party security & audit verification.",
+                  icon: FileText
                 },
                 { 
                   id: "zerotrust", 
-                  label: "Zero-Trust Engine", 
-                  desc: "Granular role-based access control.",
-                  icon: UserCheck,
-                  iconBg: "bg-amber-50 text-amber-600"
+                  label: "Zero-Trust Architecture", 
+                  desc: "Granular RBAC access & hardware SSO credentials.",
+                  icon: UserCheck
                 }
               ].map((sec) => {
                 const IconComponent = sec.icon;
@@ -323,129 +322,137 @@ export default function Home() {
                   <button
                     key={sec.id}
                     onClick={() => setSecurityTab(sec.id)}
-                    className={`w-full text-left p-4 sm:p-5 rounded-2xl transition-all flex items-center justify-between border ${
+                    className={`w-full text-left p-4 rounded-xl transition-all flex items-center justify-between border ${
                       isSelected
-                        ? "bg-white border-2 border-sky-500 shadow-md ring-4 ring-sky-500/10"
-                        : "bg-white border-slate-200/90 hover:border-slate-300 shadow-2xs"
+                        ? "bg-sky-50/70 border-sky-200 border-l-4 border-l-sky-600 shadow-2xs"
+                        : "bg-white border-slate-200/80 hover:border-slate-300"
                     }`}
                   >
                     <div className="flex items-center gap-3.5">
-                      <div className={`h-11 w-11 rounded-xl ${sec.iconBg} flex items-center justify-center shrink-0`}>
-                        <IconComponent className="h-5 w-5" />
+                      <div className="h-9 w-9 rounded-lg bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center shrink-0">
+                        <IconComponent className="h-4.5 w-4.5" />
                       </div>
                       <div>
-                        <div className="text-sm font-bold text-[#1f1e1c]">{sec.label}</div>
+                        <div className={`text-sm font-bold ${isSelected ? "text-sky-900" : "text-slate-900"}`}>{sec.label}</div>
                         <div className="text-xs text-slate-500 mt-0.5">{sec.desc}</div>
                       </div>
                     </div>
-                    <ChevronRight className={`h-4 w-4 ${isSelected ? "text-sky-600 font-bold" : "text-slate-400"}`} />
+                    <ChevronRight className={`h-4 w-4 ${isSelected ? "text-sky-600 font-bold" : "text-slate-300"}`} />
                   </button>
                 );
               })}
             </div>
 
-            {/* Right Details Panel (Soft Light Blue Background & 3D Shield Visual) */}
-            <div className="lg:col-span-7 bg-[#f0f7ff]/90 border border-sky-200/80 rounded-3xl p-6 sm:p-9 space-y-8 relative overflow-hidden shadow-xs">
+            {/* Right Specification Details Panel (Classic Enterprise Card) */}
+            <div className="lg:col-span-8 bg-white border border-slate-200/90 border-t-4 border-t-sky-600 rounded-xl p-6 sm:p-8 space-y-6 shadow-xs">
               
-              {/* Top Details Box */}
-              <div className="flex flex-col sm:flex-row items-start justify-between gap-6 relative z-10">
-                <div className="space-y-4 max-w-lg">
-                  {securityTab === "hipaa" && (
-                    <>
-                      <div className="flex items-center gap-3">
-                        <div className="h-10 w-10 rounded-xl bg-sky-500/10 text-sky-600 flex items-center justify-center">
-                          <ShieldCheck className="h-6 w-6" />
-                        </div>
-                        <h3 className="font-bold text-xl text-[#1f1e1c]">HIPAA Physical & Technical Safeguards</h3>
+              <div className="space-y-4">
+                {securityTab === "hipaa" && (
+                  <>
+                    <div className="flex items-center gap-3 pb-3 border-b border-slate-100">
+                      <div className="h-10 w-10 rounded-lg bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center">
+                        <ShieldCheck className="h-5 w-5" />
                       </div>
-                      <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        All Protected Health Information (PHI) is encrypted at rest using FIPS 140-2 validated AES-256 keys, and in transit via TLS 1.3. Strict audit logs track all record accesses.
-                      </p>
-                    </>
-                  )}
-                  {securityTab === "gdpr" && (
-                    <>
-                      <div className="flex items-center gap-3">
-                        <div className="h-10 w-10 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center">
-                          <Lock className="h-6 w-6" />
-                        </div>
-                        <h3 className="font-bold text-xl text-[#1f1e1c]">EU GDPR Data Privacy & Rights</h3>
+                      <div>
+                        <h3 className="font-bold text-xl text-slate-900">HIPAA Physical & Technical Safeguards</h3>
+                        <p className="text-xs text-slate-500">Fully compliant with HHS 45 CFR Part 160 and Part 164</p>
                       </div>
-                      <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        AxioVital enforces full patient consent governance, right-to-be-forgotten data purging APIs, and regional data residency constraints within local servers.
-                      </p>
-                    </>
-                  )}
-                  {securityTab === "soc2" && (
-                    <>
-                      <div className="flex items-center gap-3">
-                        <div className="h-10 w-10 rounded-xl bg-purple-500/10 text-purple-600 flex items-center justify-center">
-                          <Award className="h-6 w-6" />
-                        </div>
-                        <h3 className="font-bold text-xl text-[#1f1e1c]">SOC 2 Type II Certified Data Centers</h3>
-                      </div>
-                      <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        Independently audited annually to verify operational effectiveness, continuous intrusion detection monitoring, and disaster recovery redundancy.
-                      </p>
-                    </>
-                  )}
-                  {securityTab === "zerotrust" && (
-                    <>
-                      <div className="flex items-center gap-3">
-                        <div className="h-10 w-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center">
-                          <Server className="h-6 w-6" />
-                        </div>
-                        <h3 className="font-bold text-xl text-[#1f1e1c]">Zero-Trust Network Architecture</h3>
-                      </div>
-                      <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                        No implicit trust granted to any user or system. Micro-segmentation and continuous biometric identity verification ensure absolute data protection.
-                      </p>
-                    </>
-                  )}
-                </div>
-
-                {/* 3D Security Shield Graphic */}
-                <div className="hidden sm:flex shrink-0 relative">
-                  <div className="h-32 w-32 rounded-3xl bg-gradient-to-tr from-sky-400 to-indigo-500 p-0.5 shadow-xl rotate-3">
-                    <div className="h-full w-full bg-gradient-to-b from-sky-100 to-indigo-50 rounded-[22px] flex items-center justify-center">
-                      <Shield className="h-16 w-16 text-sky-600 stroke-[1.5] drop-shadow-md" />
                     </div>
-                  </div>
-                </div>
+                    <p className="text-sm text-slate-600 leading-relaxed text-pretty">
+                      All Protected Health Information (PHI) is encrypted at rest using FIPS 140-2 validated AES-256 keys, and in transit via TLS 1.3. Strict audit logs track all record accesses with zero-tamper verification.
+                    </p>
+                  </>
+                )}
+                {securityTab === "gdpr" && (
+                  <>
+                    <div className="flex items-center gap-3 pb-3 border-b border-slate-100">
+                      <div className="h-10 w-10 rounded-lg bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center">
+                        <Lock className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-xl text-slate-900">EU GDPR Data Privacy & Sovereign Rights</h3>
+                        <p className="text-xs text-slate-500">Regulation (EU) 2016/679 Privacy Framework</p>
+                      </div>
+                    </div>
+                    <p className="text-sm text-slate-600 leading-relaxed text-pretty">
+                      AxioVital enforces full patient consent governance, right-to-be-forgotten data purging APIs, and regional data residency constraints within isolated sovereign data centers.
+                    </p>
+                  </>
+                )}
+                {securityTab === "soc2" && (
+                  <>
+                    <div className="flex items-center gap-3 pb-3 border-b border-slate-100">
+                      <div className="h-10 w-10 rounded-lg bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center">
+                        <Award className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-xl text-slate-900">SOC 2 Type II Certified Operations</h3>
+                        <p className="text-xs text-slate-500">AICPA Trust Services Criteria Audit Certified</p>
+                      </div>
+                    </div>
+                    <p className="text-sm text-slate-600 leading-relaxed text-pretty">
+                      Independently audited annually to verify operational effectiveness, continuous intrusion detection monitoring, disaster recovery redundancy, and automated failover systems.
+                    </p>
+                  </>
+                )}
+                {securityTab === "zerotrust" && (
+                  <>
+                    <div className="flex items-center gap-3 pb-3 border-b border-slate-100">
+                      <div className="h-10 w-10 rounded-lg bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center">
+                        <Server className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-xl text-slate-900">Zero-Trust Network & Credential Architecture</h3>
+                        <p className="text-xs text-slate-500">NIST SP 800-207 Zero Trust Standard</p>
+                      </div>
+                    </div>
+                    <p className="text-sm text-slate-600 leading-relaxed text-pretty">
+                      No implicit trust granted to any internal user or system. Micro-segmentation, hardware NFC key verification, and role-based access control (RBAC) ensure total security.
+                    </p>
+                  </>
+                )}
               </div>
 
-              {/* Bottom 4 Feature Cards (Screenshot 2) */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-sky-200/70 relative z-10">
-                <div className="space-y-1">
-                  <div className="h-8 w-8 rounded-lg bg-sky-100/80 text-sky-700 flex items-center justify-center">
-                    <Key className="h-4 w-4" />
+              {/* Classic Technical Specification Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4 border-t border-slate-100">
+                <div className="bg-slate-50/80 border border-slate-200/70 rounded-lg p-3.5 space-y-1.5">
+                  <div className="flex items-center gap-2">
+                    <div className="h-7 w-7 rounded-md bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center">
+                      <Key className="h-3.5 w-3.5" />
+                    </div>
+                    <span className="text-xs font-bold text-slate-900">Data Encryption</span>
                   </div>
-                  <div className="text-xs font-bold text-[#1f1e1c] pt-1">Data Encryption</div>
-                  <div className="text-[11px] text-slate-500 leading-tight">AES-256 encryption at rest and in transit</div>
+                  <p className="text-[11px] text-slate-500 leading-tight">AES-256 & TLS 1.3 encryption for all data</p>
                 </div>
 
-                <div className="space-y-1">
-                  <div className="h-8 w-8 rounded-lg bg-emerald-100/80 text-emerald-700 flex items-center justify-center">
-                    <CheckCircle2 className="h-4 w-4" />
+                <div className="bg-slate-50/80 border border-slate-200/70 rounded-lg p-3.5 space-y-1.5">
+                  <div className="flex items-center gap-2">
+                    <div className="h-7 w-7 rounded-md bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center">
+                      <CheckCircle2 className="h-3.5 w-3.5" />
+                    </div>
+                    <span className="text-xs font-bold text-slate-900">Access Control</span>
                   </div>
-                  <div className="text-xs font-bold text-[#1f1e1c] pt-1">Access Control</div>
-                  <div className="text-[11px] text-slate-500 leading-tight">Role-based access with least-privilege principle</div>
+                  <p className="text-[11px] text-slate-500 leading-tight">Role-based access with least-privilege rules</p>
                 </div>
 
-                <div className="space-y-1">
-                  <div className="h-8 w-8 rounded-lg bg-purple-100/80 text-purple-700 flex items-center justify-center">
-                    <Eye className="h-4 w-4" />
+                <div className="bg-slate-50/80 border border-slate-200/70 rounded-lg p-3.5 space-y-1.5">
+                  <div className="flex items-center gap-2">
+                    <div className="h-7 w-7 rounded-md bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center">
+                      <Eye className="h-3.5 w-3.5" />
+                    </div>
+                    <span className="text-xs font-bold text-slate-900">Audit Logging</span>
                   </div>
-                  <div className="text-xs font-bold text-[#1f1e1c] pt-1">Audit Logging</div>
-                  <div className="text-[11px] text-slate-500 leading-tight">Comprehensive logs for all system activities</div>
+                  <p className="text-[11px] text-slate-500 leading-tight">Immutable audit trails for system compliance</p>
                 </div>
 
-                <div className="space-y-1">
-                  <div className="h-8 w-8 rounded-lg bg-amber-100/80 text-amber-700 flex items-center justify-center">
-                    <HardDrive className="h-4 w-4" />
+                <div className="bg-slate-50/80 border border-slate-200/70 rounded-lg p-3.5 space-y-1.5">
+                  <div className="flex items-center gap-2">
+                    <div className="h-7 w-7 rounded-md bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center">
+                      <HardDrive className="h-3.5 w-3.5" />
+                    </div>
+                    <span className="text-xs font-bold text-slate-900">Secure Infra</span>
                   </div>
-                  <div className="text-xs font-bold text-[#1f1e1c] pt-1">Secure Infra</div>
-                  <div className="text-[11px] text-slate-500 leading-tight">HIPAA-aligned cloud with 24/7 monitoring</div>
+                  <p className="text-[11px] text-slate-500 leading-tight">HIPAA-aligned cloud with 99.99% uptime SLA</p>
                 </div>
               </div>
 
@@ -456,11 +463,11 @@ export default function Home() {
       </section>
 
       {/* SECTION 6: FAQ ACCORDION */}
-      <section className="bg-transition-offwhite-white py-8 sm:py-12 relative overflow-hidden">
+      <section className="bg-transition-offwhite-white py-16 lg:py-24 relative overflow-hidden">
         <div className="mx-auto max-w-4xl px-4 sm:px-8 space-y-8">
           <div className="text-center space-y-2">
             <span className="text-xs font-bold text-sky-800 uppercase tracking-wider block">Enterprise Knowledge Base</span>
-            <h2 className="font-oracle-serif italic text-3xl sm:text-4xl font-normal text-[#1f1e1c]">
+            <h2 className="font-sans font-semibold text-3xl sm:text-4xl text-slate-900">
               Frequently Asked Questions
             </h2>
           </div>

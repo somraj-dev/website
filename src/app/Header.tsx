@@ -109,8 +109,8 @@ export default function Header() {
     <header className="w-full bg-white z-40 relative">
       
       {/* ROW 1: Top White Header Bar */}
-      <div className="border-b border-slate-200 py-3 px-4 sm:px-8 bg-white">
-        <div className="mx-auto max-w-7xl flex items-center justify-between gap-4">
+      <div className="border-b border-slate-200 py-3 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="mx-auto max-w-[1440px] flex items-center justify-between gap-4">
           
           {/* Left: Hamburger + Clean Brand Logo */}
           <div className="flex items-center gap-4 shrink-0">
@@ -191,8 +191,8 @@ export default function Header() {
       </div>
 
       {/* ROW 2: Sub-Navigation Bar (Dark Charcoal #211f1c with Yellow Underline) */}
-      <div className="oracle-subnav-bg text-white px-4 sm:px-8 border-b border-stone-800">
-        <div className="mx-auto max-w-7xl flex items-center justify-between h-12">
+      <div className="oracle-subnav-bg text-white px-4 sm:px-6 lg:px-8 border-b border-stone-800">
+        <div className="mx-auto max-w-[1440px] flex items-center justify-between h-12">
           <nav className="flex items-center gap-8 text-sm font-semibold h-full">
             {subNavItems.map((item) => {
               const isActive = activeTab === item.id || openDropdown === item.menuKey;
