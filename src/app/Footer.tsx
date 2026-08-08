@@ -26,16 +26,16 @@ export default function Footer() {
               <label htmlFor="footer-email" className="text-xs font-bold uppercase tracking-wider text-slate-900 block">
                 Subscribe to Health Updates
               </label>
-              <form onSubmit={(e) => e.preventDefault()} className="flex items-center gap-2 max-w-sm">
+              <form onSubmit={(e) => e.preventDefault()} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 max-w-sm">
                 <input
                   id="footer-email"
                   type="email"
                   placeholder="Enter business email"
-                  className="bg-white border border-slate-300 rounded-lg px-3.5 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 shadow-2xs w-full transition-all"
+                  className="bg-white border border-slate-300 rounded-lg px-3.5 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 shadow-2xs w-full transition-all"
                 />
                 <button
                   type="submit"
-                  className="bg-slate-900 hover:bg-slate-800 text-white font-medium text-sm px-4 py-2 rounded-lg transition-colors shrink-0 cursor-pointer shadow-2xs"
+                  className="bg-slate-900 hover:bg-slate-800 text-white font-medium text-sm px-4 py-2.5 rounded-lg transition-colors shrink-0 cursor-pointer shadow-2xs"
                 >
                   Subscribe
                 </button>
@@ -142,24 +142,24 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar: Copyright & Legal */}
-        <div className="border-t border-slate-200/80 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-normal">
+        <div className="border-t border-slate-200/80 pt-8 flex flex-col items-center gap-6 md:flex-row md:justify-between md:gap-4 text-xs text-slate-500 font-normal text-center md:text-left">
           <div>
             © {new Date().getFullYear()} AxioVital Digital Healthcare Technologies Inc. All rights reserved.
           </div>
 
-          <div className="flex items-center gap-4 flex-wrap justify-center">
+          <div className="flex items-center gap-x-3 gap-y-1 flex-wrap justify-center">
             <Link href="/documentation" className="hover:text-slate-900 transition-colors">
               Privacy Policy
             </Link>
-            <span>•</span>
+            <span className="hidden sm:inline">•</span>
             <Link href="/documentation" className="hover:text-slate-900 transition-colors">
               Terms of Service
             </Link>
-            <span>•</span>
+            <span className="hidden sm:inline">•</span>
             <Link href="/documentation" className="hover:text-slate-900 transition-colors">
               Cookie Preferences
             </Link>
-            <span>•</span>
+            <span className="hidden sm:inline">•</span>
             <Link href="/documentation" className="hover:text-slate-900 transition-colors">
               Security & HIPAA Disclosures
             </Link>

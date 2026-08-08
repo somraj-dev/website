@@ -190,23 +190,23 @@ export default function Header() {
         </div>
       </div>
 
-      {/* ROW 2: Sub-Navigation Bar (Dark Charcoal #211f1c with Yellow Underline) */}
-      <div className="oracle-subnav-bg text-white px-4 sm:px-6 lg:px-8 border-b border-stone-800">
+      {/* ROW 2: Sub-Navigation Bar (Dark Charcoal #211f1c with Yellow Underline) — Hidden on mobile */}
+      <div className="oracle-subnav-bg text-white px-4 sm:px-6 lg:px-8 border-b border-stone-800 hidden sm:block">
         <div className="mx-auto max-w-[1440px] flex items-center justify-between h-12">
-          <nav className="flex items-center gap-8 text-sm font-semibold h-full">
+          <nav className="flex items-center gap-4 sm:gap-6 lg:gap-8 text-sm font-semibold h-full overflow-x-auto scrollbar-hide">
             {subNavItems.map((item) => {
               const isActive = activeTab === item.id || openDropdown === item.menuKey;
               return (
                 <div 
                   key={item.id} 
-                  className="h-full flex items-center relative"
+                  className="h-full flex items-center relative shrink-0"
                   onMouseEnter={() => item.menuKey && setOpenDropdown(item.menuKey)}
                   onMouseLeave={() => setOpenDropdown(null)}
                 >
                   {item.hasDropdown ? (
                     <button
                       onClick={() => handleTabClick(item)}
-                      className={`h-full flex items-center gap-1.5 px-1 text-sm font-semibold transition-colors border-b-2 ${
+                      className={`h-full flex items-center gap-1.5 px-1 text-sm font-semibold transition-colors border-b-2 whitespace-nowrap ${
                         isActive 
                           ? "border-[#e6b738] text-white" 
                           : "border-transparent text-slate-300 hover:text-white"
@@ -219,7 +219,7 @@ export default function Header() {
                     <Link
                       href={item.href || "/"}
                       onClick={() => { setActiveTab(item.id); setOpenDropdown(null); }}
-                      className={`h-full flex items-center gap-1.5 px-1 text-sm font-semibold transition-colors border-b-2 ${
+                      className={`h-full flex items-center gap-1.5 px-1 text-sm font-semibold transition-colors border-b-2 whitespace-nowrap ${
                         isActive 
                           ? "border-[#e6b738] text-white" 
                           : "border-transparent text-slate-300 hover:text-white"
@@ -256,55 +256,60 @@ export default function Header() {
       {/* 2-COLUMN LIGHT BLUE SLIDING HAMBURGER DRAWER */}
       {hamburgerOpen && (
         <div className="fixed inset-0 z-50 flex">
-          {/* Dimmed Background Overlay + Top Right Close X Button */}
+          {/* Dimmed Background Overlay */}
           <div className="fixed inset-0 bg-slate-950/60 backdrop-blur-xs" onClick={() => setHamburgerOpen(false)} />
-          <button 
-            onClick={() => setHamburgerOpen(false)}
-            className="absolute top-4 left-[610px] z-50 text-white hover:text-slate-300 p-2 hidden lg:block"
-            title="Close Menu"
-          >
-            <X className="h-6 w-6 stroke-[2.5]" />
-          </button>
 
-          {/* 2-Column Light Blue Menu Panel */}
-          <div className="relative bg-[#f0f7ff] text-slate-900 w-full max-w-2xl h-full shadow-2xl z-20 animate-in slide-in-from-left duration-200 flex overflow-hidden border-r border-sky-200">
+          {/* Responsive Light Blue Menu Panel — stacks vertically on mobile, 2-col on sm+ */}
+          <div className="relative bg-[#f0f7ff] text-slate-900 w-full sm:max-w-2xl h-full shadow-2xl z-20 animate-in slide-in-from-left duration-200 flex flex-col sm:flex-row overflow-hidden border-r border-sky-200">
             
-            {/* Column 1: Primary Categories (Soft Sky Blue #e0f2fe) */}
-            <div className="w-64 bg-[#e0f2fe] border-r border-sky-200 py-6 font-normal text-xs sm:text-sm shrink-0 space-y-1">
-              <div className="px-5 pb-4 border-b border-sky-200 flex justify-between items-center lg:hidden">
+            {/* Drawer Header with Close Button (always visible) */}
+            <div className="flex items-center justify-between px-5 py-3 border-b border-sky-200 bg-[#e0f2fe] sm:hidden shrink-0">
+              <span className="font-extrabold text-[#c74634] text-lg">AXIOVITAL</span>
+              <button onClick={() => setHamburgerOpen(false)} className="p-1.5 text-slate-600 hover:text-slate-900 rounded-lg hover:bg-sky-200/60 transition-colors">
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+
+            {/* Column 1: Primary Categories — horizontal scroll on mobile, vertical sidebar on sm+ */}
+            <div className="bg-[#e0f2fe] border-b sm:border-b-0 sm:border-r border-sky-200 font-normal text-xs sm:text-sm shrink-0 sm:w-64 sm:py-6 sm:space-y-1 overflow-x-auto sm:overflow-x-visible sm:overflow-y-auto">
+              {/* Desktop-only header with close */}
+              <div className="px-5 pb-4 border-b border-sky-200 hidden sm:flex justify-between items-center">
                 <span className="font-extrabold text-[#c74634] text-lg">AXIOVITAL</span>
-                <button onClick={() => setHamburgerOpen(false)} className="p-1 text-slate-600">
+                <button onClick={() => setHamburgerOpen(false)} className="p-1 text-slate-600 hover:text-slate-900">
                   <X className="h-5 w-5" />
                 </button>
               </div>
 
-              {[
-                { id: "healthcare", label: "Digital Platform Overview" },
-                { id: "solutions", label: "Healthcare Solutions" },
-                { id: "products", label: "Healthcare Products" },
-                { id: "company", label: "Company & Resources" }
-              ].map((cat) => {
-                const isCatActive = activeDrawerCategory === cat.id;
-                return (
-                  <button
-                    key={cat.id}
-                    onMouseEnter={() => setActiveDrawerCategory(cat.id)}
-                    onClick={() => setActiveDrawerCategory(cat.id)}
-                    className={`w-full text-left px-5 py-3 flex items-center justify-between transition-colors ${
-                      isCatActive 
-                        ? "bg-[#0284c7] text-white font-bold shadow-xs" 
-                        : "text-slate-700 hover:bg-sky-200/60"
-                    }`}
-                  >
-                    <span>{cat.label}</span>
-                    <ChevronRight className={`h-4 w-4 ${isCatActive ? "text-white" : "text-slate-500"}`} />
-                  </button>
-                );
-              })}
+              {/* Categories — horizontal flex on mobile, vertical list on sm+ */}
+              <div className="flex sm:flex-col gap-0">
+                {[
+                  { id: "healthcare", label: "Digital Platform Overview" },
+                  { id: "solutions", label: "Healthcare Solutions" },
+                  { id: "products", label: "Healthcare Products" },
+                  { id: "company", label: "Company & Resources" }
+                ].map((cat) => {
+                  const isCatActive = activeDrawerCategory === cat.id;
+                  return (
+                    <button
+                      key={cat.id}
+                      onMouseEnter={() => setActiveDrawerCategory(cat.id)}
+                      onClick={() => setActiveDrawerCategory(cat.id)}
+                      className={`text-left px-5 py-3 flex items-center gap-2 sm:justify-between transition-colors whitespace-nowrap shrink-0 sm:w-full ${
+                        isCatActive 
+                          ? "bg-[#0284c7] text-white font-bold shadow-xs" 
+                          : "text-slate-700 hover:bg-sky-200/60"
+                      }`}
+                    >
+                      <span>{cat.label}</span>
+                      <ChevronRight className={`h-4 w-4 hidden sm:block ${isCatActive ? "text-white" : "text-slate-500"}`} />
+                    </button>
+                  );
+                })}
+              </div>
             </div>
 
-            {/* Column 2: Sub-categories Panel (Light Blue #f0f7ff) */}
-            <div className="flex-1 bg-[#f0f7ff] py-6 px-6 overflow-y-auto space-y-3">
+            {/* Column 2: Sub-categories Panel */}
+            <div className="flex-1 bg-[#f0f7ff] py-4 sm:py-6 px-4 sm:px-6 overflow-y-auto space-y-3">
               <h3 className="text-sm font-bold text-slate-900 border-b border-sky-200 pb-3 mb-2">
                 {drawerData[activeDrawerCategory]?.title}
               </h3>

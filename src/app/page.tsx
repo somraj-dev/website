@@ -41,7 +41,7 @@ export default function Home() {
                 Connected Healthcare Ecosystem
               </span>
 
-              <h1 className="font-baskerville text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-[1.2] tracking-tight">
+              <h1 className="font-baskerville text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 leading-[1.15] tracking-tight">
                 Axiovital Health Service and Tech Authority
               </h1>
 
@@ -50,7 +50,7 @@ export default function Home() {
                 AxioVital is an integrated healthcare platform connecting patients, doctors, hospitals, clinics, and laboratories through a unified digital operating system. Streamline online appointment booking, electronic health records (EHR), digital prescriptions, and hospital workflows seamlessly.
               </p>
 
-              <div className="flex flex-wrap items-center gap-4 pt-3">
+              <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4 pt-3">
                 <button 
                   onClick={() => setDemoModalOpen(true)}
                   className="btn-primary"
@@ -82,7 +82,7 @@ export default function Home() {
                     </div>
 
                     <div className="space-y-3">
-                      <h3 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-white leading-tight">
+                      <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-white leading-tight">
                         Connecting Patients, Doctors, & Hospitals Digitally
                       </h3>
                     </div>
@@ -269,10 +269,10 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-start">
             
             {/* Left Navigation Cards Column (Classic Enterprise Menu) */}
-            <div className="lg:col-span-4 space-y-2">
+            <div className="md:col-span-4 space-y-2">
               {[
                 { 
                   id: "hipaa", 
@@ -300,7 +300,7 @@ export default function Home() {
                   <button
                     key={sec.id}
                     onClick={() => setSecurityTab(sec.id)}
-                    className={`w-full text-left p-4 rounded-xl transition-all flex items-center justify-between border ${
+                    className={`w-full text-left p-3 sm:p-4 rounded-xl transition-all flex items-center justify-between border ${
                       isSelected
                         ? "bg-sky-50/70 border-sky-200 border-l-4 border-l-sky-600 shadow-2xs"
                         : "bg-white border-slate-200/80 hover:border-slate-300"
@@ -317,7 +317,7 @@ export default function Home() {
             </div>
 
             {/* Right Specification Details Panel (Classic Enterprise Card) */}
-            <div className="lg:col-span-8 bg-white border border-slate-200/90 border-t-4 border-t-sky-600 rounded-xl p-6 sm:p-8 space-y-6 shadow-xs">
+            <div className="md:col-span-8 bg-white border border-slate-200/90 border-t-4 border-t-sky-600 rounded-xl p-4 sm:p-6 md:p-8 space-y-5 sm:space-y-6 shadow-xs">
               
               <div className="space-y-4">
                 {securityTab === "hipaa" && (
@@ -367,7 +367,7 @@ export default function Home() {
               </div>
 
               {/* Classic Technical Specification Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4 border-t border-slate-100">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 pt-4 border-t border-slate-100">
                 <div className="bg-slate-50/80 border border-slate-200/70 rounded-lg p-3.5 space-y-1.5">
                   <span className="text-xs font-bold text-slate-900 block">Data Encryption</span>
                   <p className="text-[11px] text-slate-500 leading-tight">AES-256 & TLS 1.3 encryption for all data</p>

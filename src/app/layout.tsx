@@ -12,6 +12,12 @@ export const metadata: Metadata = {
   keywords: ["Healthcare Platform", "Enterprise EHR", "Digital Identity", "AxioVital", "AxioAI", "Health Tech"],
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
