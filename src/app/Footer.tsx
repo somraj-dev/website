@@ -136,6 +136,11 @@ export default function Footer() {
                   Support
                 </Link>
               </li>
+              <li>
+                <Link href="/sitemap.xml" className="text-slate-600 hover:text-slate-900 transition-colors">
+                  Sitemap
+                </Link>
+              </li>
             </ul>
           </div>
 
