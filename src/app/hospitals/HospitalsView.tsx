@@ -1,79 +1,222 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
+import { Play, X, Check, ChevronRight } from "lucide-react";
 
 export default function HospitalsView() {
+  const [activeTab, setActiveTab] = useState("partner");
+  const [videoModalOpen, setVideoModalOpen] = useState(false);
   const [occupancy, setOccupancy] = useState(82);
 
-  const stats = [
-    { title: "Real-time sync latency", value: "<150ms" },
-    { title: "Average ER wait reduction", value: "24%" },
-    { title: "Security protocol strength", value: "AES-256" }
-  ];
-
   return (
-    <div className="bg-slate-50 min-h-screen py-16 sm:py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
-        
-        {/* Banner */}
-        <div className="text-center max-w-3xl mx-auto space-y-4">
-          <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full">For Health Networks</span>
-          <h1 className="text-4xl font-extrabold text-slate-900 tracking-tight sm:text-5xl">
-            AxioHospital Platform
-          </h1>
-          <p className="text-lg text-slate-600">
-            Synchronize ER throughput, track available bed capacity, and coordinate multi-facility pipelines instantly.
-          </p>
+    <div className="bg-white min-h-screen font-sans text-[#1f1e1c]">
+      
+      {/* 1. TOP DARK HERO BANNER */}
+      <section className="bg-[#384345] text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        {/* Abstract Background Shapes */}
+        <div className="absolute top-0 right-0 w-96 h-96 opacity-30 pointer-events-none">
+          <div className="absolute top-10 right-10 w-48 h-32 bg-[#d8bc68] rounded-full transform rotate-12 blur-2xl"></div>
+          <div className="absolute top-20 right-48 w-40 h-40 bg-[#749599] rounded-full blur-xl"></div>
         </div>
 
-        {/* Dashboard mock simulator */}
-        <div className="bg-white border border-slate-200 rounded-3xl p-8 max-w-4xl mx-auto shadow-sm space-y-6">
-          <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4 border-b border-slate-100 pb-4">
-            <div>
-              <h3 className="font-bold text-slate-900 text-lg">Central Facility Status</h3>
-              <p className="text-xs text-slate-500">Live monitoring data simulator.</p>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="h-2.5 w-2.5 rounded-full bg-emerald-500"></span>
-              <span className="text-xs font-semibold text-slate-600">All Node Systems Connected</span>
-            </div>
-          </div>
+        <div className="mx-auto max-w-[1440px] relative z-10 space-y-6">
+          <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight text-white max-w-3xl">
+            Win and grow more with AxioVital
+          </h1>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            <div className="bg-slate-50 border border-slate-100 p-5 rounded-2xl space-y-2">
-              <div className="text-xs font-semibold text-slate-400 uppercase">Emergency Room Load</div>
-              <div className="text-2xl font-bold text-slate-800">Normal</div>
-            </div>
+          <div className="space-y-4 max-w-4xl text-slate-200 text-xs sm:text-sm leading-relaxed font-normal">
+            <p>
+              AxioVital is redefining what's possible in digital healthcare with an unmatched, AI-native technology stack spanning infrastructure, database, and applications. This end-to-end approach helps healthcare networks accelerate innovation, reduce operational complexity, and run mission-critical clinical workloads with built-in security and performance. For hospital partners, it creates a powerful advantage: more ways to differentiate, more opportunities to deliver high-value solutions and services, and more paths to grow.
+            </p>
+            <p>
+              Explore our enhanced <Link href="/solutions" className="text-white underline hover:text-slate-300 font-semibold">AxioVital PartnerNetwork (APN)</Link> program to see how you can achieve greater success by partnering with AxioVital.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 2. HORIZONTAL TAB NAVIGATION BAR */}
+      <div className="border-b border-slate-200 bg-white px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1440px]">
+          <div className="flex items-center gap-8 text-xs sm:text-sm font-bold overflow-x-auto scrollbar-hide">
+            {[
+              { id: "partner", label: "Partner with AxioVital" },
+              { id: "choose-level", label: "Choose your level" },
+              { id: "additional-paths", label: "Additional paths" },
+              { id: "testimonials", label: "Partner testimonials" },
+              { id: "join-now", label: "Join now" },
+            ].map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`py-4 transition-colors border-b-2 whitespace-nowrap cursor-pointer ${
+                  activeTab === tab.id
+                    ? "border-[#1f1e1c] text-[#1f1e1c]"
+                    : "border-transparent text-slate-600 hover:text-slate-900"
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* 3. TAB CONTENT SECTION */}
+      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1440px]">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
-            <div className="bg-slate-50 border border-slate-100 p-5 rounded-2xl space-y-2">
-              <div className="text-xs font-semibold text-slate-400 uppercase">Interactive Bed Occupancy</div>
-              <div className="flex items-center justify-between">
-                <span className="text-2xl font-bold text-blue-600">{occupancy}%</span>
-                <div className="flex gap-1">
-                  <button onClick={() => setOccupancy(Math.max(50, occupancy - 5))} className="px-2 py-0.5 border bg-white rounded-md text-xs font-bold">-</button>
-                  <button onClick={() => setOccupancy(Math.min(100, occupancy + 5))} className="px-2 py-0.5 border bg-white rounded-md text-xs font-bold">+</button>
+            {/* Left Column: Program Value Details */}
+            <div className="lg:col-span-7 space-y-6">
+              <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#1f1e1c]">
+                A partner program built for you
+              </h2>
+
+              <p className="text-sm font-bold text-[#1f1e1c]">
+                Our partner program gives you choice and flexibility so you can tailor it to best meet your needs.
+              </p>
+
+              <ul className="space-y-4 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                <li className="flex items-start gap-2">
+                  <span className="text-[#1f1e1c] font-extrabold text-base leading-none">•</span>
+                  <span>You choose the <strong className="text-[#1f1e1c]">level</strong> of engagement and investment</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#1f1e1c] font-extrabold text-base leading-none">•</span>
+                  <span>You choose from a <strong className="text-[#1f1e1c]">wide range of included benefits</strong> across training and enablement, go-to-market collaboration, technical accelerators, and success support</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#1f1e1c] font-extrabold text-base leading-none">•</span>
+                  <span>You choose how to be paid for achieving <strong className="text-[#1f1e1c]">incentives tied to driving growth</strong> with AxioVital—monetary payouts or AxioVital Partner Credits that unlock additional benefits</span>
+                </li>
+              </ul>
+
+              <div className="pt-2">
+                <Link
+                  href="/contact"
+                  className="inline-block bg-[#1f1e1c] hover:bg-[#33312e] text-white text-xs sm:text-sm font-bold px-6 py-3 rounded-2xs transition-colors shadow-2xs"
+                >
+                  Start by choosing your level
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Column: Visual Video Player Card */}
+            <div className="lg:col-span-5">
+              <div 
+                onClick={() => setVideoModalOpen(true)}
+                className="bg-[#f7f9fa] border border-slate-200 rounded-xl p-8 sm:p-12 relative overflow-hidden group cursor-pointer shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-[280px] sm:h-[320px]"
+              >
+                {/* Decorative Red Corner Accent */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#c74634] rounded-bl-full pointer-events-none opacity-90 transform translate-x-8 -translate-y-8 group-hover:scale-110 transition-transform"></div>
+
+                {/* Card Header Content */}
+                <div className="relative z-10 space-y-1">
+                  <span className="text-2xl font-extrabold text-[#c74634] tracking-tight block">
+                    AXIOVITAL
+                  </span>
+                  <span className="text-sm font-bold text-slate-800 tracking-wide uppercase block">
+                    PartnerNetwork
+                  </span>
+                </div>
+
+                {/* Play Button Circle */}
+                <div className="relative z-10 my-auto flex justify-center items-center">
+                  <div className="h-16 w-16 rounded-full bg-[#1f1e1c] text-white flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:bg-[#c74634] transition-all">
+                    <Play className="h-7 w-7 fill-current ml-1" />
+                  </div>
+                </div>
+
+                {/* Card Subtitle Footer */}
+                <div className="relative z-10">
+                  <p className="text-base font-bold text-slate-900">
+                    Choice and Flexibility
+                  </p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-slate-50 border border-slate-100 p-5 rounded-2xl space-y-2">
-              <div className="text-xs font-semibold text-slate-400 uppercase">Active Diagnostics Pipelines</div>
-              <div className="text-2xl font-bold text-slate-800">14 Active</div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. REAL-TIME FACILITY STATUS SIMULATOR */}
+      <section className="bg-slate-50 py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-t border-slate-200">
+        <div className="mx-auto max-w-[1440px] space-y-8">
+          <div className="text-center max-w-3xl mx-auto space-y-2">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#c74634] bg-red-50 px-3 py-1 rounded-full border border-red-200">Live Hospital Simulator</span>
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#1f1e1c]">Central Hospital Operating System</h2>
+          </div>
+
+          <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto shadow-sm space-y-6">
+            <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4 border-b border-slate-100 pb-4">
+              <div>
+                <h3 className="font-bold text-slate-900 text-base sm:text-lg">Central Facility Load Status</h3>
+                <p className="text-xs text-slate-500">Live telemetry and bed capacity simulator.</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span className="text-xs font-semibold text-slate-700">All Hospital Nodes Operational</span>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              <div className="bg-slate-50 border border-slate-200 p-5 rounded-xl space-y-1">
+                <div className="text-xs font-bold text-slate-400 uppercase">Emergency Room Load</div>
+                <div className="text-xl font-bold text-slate-800">Normal</div>
+              </div>
+              
+              <div className="bg-slate-50 border border-slate-200 p-5 rounded-xl space-y-1">
+                <div className="text-xs font-bold text-slate-400 uppercase">Bed Occupancy Rate</div>
+                <div className="flex items-center justify-between">
+                  <span className="text-2xl font-bold text-[#c74634]">{occupancy}%</span>
+                  <div className="flex gap-1">
+                    <button onClick={() => setOccupancy(Math.max(50, occupancy - 5))} className="px-2 py-1 border border-slate-300 bg-white rounded text-xs font-bold hover:bg-slate-100 cursor-pointer">-</button>
+                    <button onClick={() => setOccupancy(Math.min(100, occupancy + 5))} className="px-2 py-1 border border-slate-300 bg-white rounded text-xs font-bold hover:bg-slate-100 cursor-pointer">+</button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-slate-50 border border-slate-200 p-5 rounded-xl space-y-1">
+                <div className="text-xs font-bold text-slate-400 uppercase">Connected EHR Gateways</div>
+                <div className="text-xl font-bold text-slate-800">14 Multi-Facility</div>
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* Core Value Props */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {stats.map((s, idx) => (
-            <div key={idx} className="bg-white border border-slate-200 p-8 rounded-2xl shadow-sm text-center space-y-2">
-              <div className="text-3xl font-extrabold text-blue-600">{s.value}</div>
-              <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider">{s.title}</div>
-            </div>
-          ))}
+      {/* YOUTUBE VIDEO POPUP MODAL */}
+      {videoModalOpen && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-8 bg-black/80 backdrop-blur-xs transition-all duration-300 animate-in fade-in"
+          onClick={() => setVideoModalOpen(false)}
+        >
+          <button 
+            onClick={() => setVideoModalOpen(false)} 
+            className="fixed top-4 right-4 sm:top-6 sm:right-6 text-white/80 hover:text-white bg-black/50 hover:bg-black/80 p-2 sm:p-2.5 rounded-full transition-all duration-200 z-50 border border-white/20 shadow-2xl focus:outline-none cursor-pointer"
+            aria-label="Close Video Modal"
+          >
+            <X className="h-6 w-6 sm:h-7 sm:w-7" />
+          </button>
+
+          <div 
+            className="bg-black rounded-xl sm:rounded-2xl overflow-hidden max-w-5xl w-full shadow-2xl relative aspect-video flex flex-col border border-white/10"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <iframe
+              src="https://www.youtube.com/embed/IT4YSBtV_2w?autoplay=1"
+              title="AxioVital Healthcare Demo Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="w-full h-full border-0"
+            />
+          </div>
         </div>
+      )}
 
-      </div>
     </div>
   );
 }
