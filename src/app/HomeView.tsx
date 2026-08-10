@@ -97,17 +97,9 @@ export default function HomeView() {
                     </div>
                   </div>
                 </div>
-
-                <div className="p-4 bg-white border-t border-slate-100">
-                  <button 
-                    onClick={() => setVideoModalOpen(true)}
-                    className="text-xs sm:text-sm font-bold text-[#1f1e1c] hover:text-[#c74634] transition-colors flex items-center gap-1 text-left"
-                  >
-                    Watch Platform Demo: See how AxioVital simplifies care delivery (1:45) <ChevronRight className="h-4 w-4 text-slate-500 shrink-0" />
-                  </button>
-                </div>
               </div>
             </div>
+
 
           </div>
         </div>
