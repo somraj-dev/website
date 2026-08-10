@@ -142,51 +142,7 @@ export default function HospitalsView() {
         </div>
       </section>
 
-      {/* 4. REAL-TIME FACILITY STATUS SIMULATOR */}
-      <section className="bg-slate-50 py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-t border-slate-200">
-        <div className="mx-auto max-w-[1440px] space-y-8">
-          <div className="text-center max-w-3xl mx-auto space-y-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#c74634] bg-red-50 px-3 py-1 rounded-full border border-red-200">Live Hospital Simulator</span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#1f1e1c]">Central Hospital Operating System</h2>
-          </div>
 
-          <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto shadow-sm space-y-6">
-            <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4 border-b border-slate-100 pb-4">
-              <div>
-                <h3 className="font-bold text-slate-900 text-base sm:text-lg">Central Facility Load Status</h3>
-                <p className="text-xs text-slate-500">Live telemetry and bed capacity simulator.</p>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                <span className="text-xs font-semibold text-slate-700">All Hospital Nodes Operational</span>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-              <div className="bg-slate-50 border border-slate-200 p-5 rounded-xl space-y-1">
-                <div className="text-xs font-bold text-slate-400 uppercase">Emergency Room Load</div>
-                <div className="text-xl font-bold text-slate-800">Normal</div>
-              </div>
-              
-              <div className="bg-slate-50 border border-slate-200 p-5 rounded-xl space-y-1">
-                <div className="text-xs font-bold text-slate-400 uppercase">Bed Occupancy Rate</div>
-                <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold text-[#c74634]">{occupancy}%</span>
-                  <div className="flex gap-1">
-                    <button onClick={() => setOccupancy(Math.max(50, occupancy - 5))} className="px-2 py-1 border border-slate-300 bg-white rounded text-xs font-bold hover:bg-slate-100 cursor-pointer">-</button>
-                    <button onClick={() => setOccupancy(Math.min(100, occupancy + 5))} className="px-2 py-1 border border-slate-300 bg-white rounded text-xs font-bold hover:bg-slate-100 cursor-pointer">+</button>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-slate-50 border border-slate-200 p-5 rounded-xl space-y-1">
-                <div className="text-xs font-bold text-slate-400 uppercase">Connected EHR Gateways</div>
-                <div className="text-xl font-bold text-slate-800">14 Multi-Facility</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* YOUTUBE VIDEO POPUP MODAL */}
       {videoModalOpen && (
