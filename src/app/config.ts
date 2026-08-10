@@ -22,7 +22,7 @@ export const siteConfig = {
       "https://www.linkedin.com/in/quantaforze-llc-b142a7398/",
       "https://x.com/axiovital",
       "https://www.youtube.com/@axiovital-hrm",
-      "https://github.com/axiovital"
+      "https://github.com/somraj-devji"
     ],
 
     contactPoint: {

@@ -32,7 +32,7 @@ This document serves as the project's single source of truth for all public enti
 * **LinkedIn:** `https://www.linkedin.com/in/quantaforze-llc-b142a7398/`
 * **X / Twitter:** `https://x.com/axiovital`
 * **YouTube:** `https://www.youtube.com/@axiovital-hrm`
-* **GitHub:** `https://github.com/axiovital`
+* **GitHub:** `https://github.com/somraj-devji`
 
 *Note: Unconfirmed social profiles (e.g. Instagram, Wikipedia) are intentionally excluded until officially claimed to preserve entity purity.*
 
