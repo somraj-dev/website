@@ -463,45 +463,37 @@ export default function HomeView() {
         </div>
       )}
 
-      {/* YOUTUBE VIDEO POPUP MODAL */}
+      {/* YOUTUBE VIDEO POPUP MODAL (EXACT UI MATCH) */}
       {videoModalOpen && (
         <div 
-          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-950/80 backdrop-blur-md transition-all duration-300 animate-in fade-in"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-8 bg-black/80 backdrop-blur-xs transition-all duration-300 animate-in fade-in"
           onClick={() => setVideoModalOpen(false)}
         >
+          {/* Top-Right Cancel (X) Icon matching reference UI */}
+          <button 
+            onClick={() => setVideoModalOpen(false)} 
+            className="fixed top-4 right-4 sm:top-6 sm:right-6 text-white/80 hover:text-white bg-black/50 hover:bg-black/80 p-2 sm:p-2.5 rounded-full transition-all duration-200 z-50 border border-white/20 shadow-2xl focus:outline-none cursor-pointer"
+            aria-label="Close Video Modal"
+          >
+            <X className="h-6 w-6 sm:h-7 sm:w-7" />
+          </button>
+
+          {/* Centered Borderless Video Window */}
           <div 
-            className="bg-slate-900 rounded-2xl overflow-hidden max-w-5xl w-full shadow-2xl border border-slate-700/80 relative space-y-0 aspect-video flex flex-col"
+            className="bg-black rounded-xl sm:rounded-2xl overflow-hidden max-w-5xl w-full shadow-2xl relative aspect-video flex flex-col border border-white/10"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Modal Header */}
-            <div className="bg-slate-900 px-4 py-3 flex items-center justify-between border-b border-slate-800 text-white shrink-0">
-              <div className="flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-[#c74634] animate-pulse" />
-                <span className="text-xs font-bold tracking-wide uppercase text-slate-200">AxioVital Healthcare Demo</span>
-              </div>
-              <button 
-                onClick={() => setVideoModalOpen(false)} 
-                className="text-slate-400 hover:text-white p-1 rounded-lg bg-slate-800 hover:bg-slate-700 transition-colors flex items-center gap-1.5 text-xs font-bold px-2.5 py-1"
-                aria-label="Close Video"
-              >
-                <span>Close</span>
-                <X className="h-4 w-4" />
-              </button>
-            </div>
-
-            {/* Embedded YouTube Player */}
-            <div className="relative w-full flex-grow bg-black">
-              <iframe
-                src="https://www.youtube.com/embed/IT4YSBtV_2w?autoplay=1"
-                title="AxioVital Healthcare Platform Video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                className="absolute inset-0 w-full h-full border-0"
-              />
-            </div>
+            <iframe
+              src="https://www.youtube.com/embed/IT4YSBtV_2w?autoplay=1"
+              title="AxioVital Healthcare Demo Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="w-full h-full border-0"
+            />
           </div>
         </div>
       )}
+
 
     </div>
   );
