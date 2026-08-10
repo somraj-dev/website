@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   },
   description: "AxioVital is the next-generation, AI-powered healthcare operating system offering security, interoperability, patient access cards, and electronic health record integration.",
   keywords: ["Healthcare Platform", "Enterprise EHR", "Digital Identity", "AxioVital", "AxioAI", "Health Tech"],
+  verification: {
+    google: "0zpf3LZ_dPAh6JRz42ML5kPHJ-SPYmK7roquL8olCHo",
+  },
 };
 
 export const viewport = {
