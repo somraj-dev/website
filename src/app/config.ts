@@ -19,11 +19,12 @@ export const siteConfig = {
     logo: "https://axiovital.quantaforze.com/oracle_hero_doctor.jpg",
     sameAs: [
       "https://quantaforze.com",
-      "https://www.linkedin.com/company/axiovital",
+      "https://www.linkedin.com/in/quantaforze-llc-b142a7398/",
       "https://x.com/axiovital",
+      "https://www.youtube.com/@axiovital-hrm",
       "https://github.com/axiovital"
-
     ],
+
     contactPoint: {
       contactType: "customer support",
       email: "support@quantaforze.com",
