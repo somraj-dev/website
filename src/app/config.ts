@@ -20,8 +20,9 @@ export const siteConfig = {
     sameAs: [
       "https://quantaforze.com",
       "https://www.linkedin.com/company/axiovital",
-      "https://twitter.com/axiovital",
+      "https://x.com/axiovital",
       "https://github.com/axiovital"
+
     ],
     contactPoint: {
       contactType: "sales",
