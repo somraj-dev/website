@@ -80,8 +80,9 @@ export default function About() {
             <div>
               <span className="text-slate-400 block uppercase text-[10px]">Primary Inquiries</span>
               <Link href="/contact" className="text-blue-600 text-sm font-bold hover:underline">
-                sales@axiovital.com
+                support@quantaforze.com
               </Link>
+
             </div>
           </div>
         </div>

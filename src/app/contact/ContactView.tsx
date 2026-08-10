@@ -27,7 +27,8 @@ export default function ContactView() {
           <div className="space-y-4 text-sm font-semibold text-slate-700">
             <div className="flex items-center gap-3">
               <Mail className="h-5 w-5 text-blue-600" />
-              <span>sales@axiovital.com</span>
+              <span>support@quantaforze.com</span>
+
             </div>
             <div className="flex items-center gap-3">
               <Phone className="h-5 w-5 text-blue-600" />

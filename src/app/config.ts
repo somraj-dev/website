@@ -25,10 +25,11 @@ export const siteConfig = {
 
     ],
     contactPoint: {
-      contactType: "sales",
-      email: "sales@axiovital.com",
-      supportEmail: "support@axiovital.quantaforze.com"
+      contactType: "customer support",
+      email: "support@quantaforze.com",
+      supportEmail: "support@quantaforze.com"
     }
+
   },
 
 

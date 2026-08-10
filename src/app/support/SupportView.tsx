@@ -66,7 +66,8 @@ export default function SupportView() {
     { title: "Hospital Enterprise Support", desc: "Dedicated SLA engineering team for enterprise hospital systems.", icon: Building2, detail: "Dedicated SLA" },
     { title: "Emergency Assistance", desc: "Priority hotline for critical hospital platform downtime.", icon: HeartPulse, detail: "Instant Response" },
     { title: "Live Chat Support", desc: "Instant chat with an AxioVital support specialist.", icon: MessageSquare, detail: "Average wait: < 2 mins" },
-    { title: "Email Support", desc: "Send detailed inquiries directly to support@axiovital.quantaforze.com.", icon: FileText, detail: "Response in < 2 hrs" },
+    { title: "Email Support", desc: "Send detailed inquiries directly to support@quantaforze.com.", icon: FileText, detail: "Response in < 2 hrs" },
+
     { title: "Community Forum", desc: "Connect with healthcare admins and doctors in our forum.", icon: Users, detail: "Peer Support" },
   ];
 
