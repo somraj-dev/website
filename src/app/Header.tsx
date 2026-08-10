@@ -194,7 +194,7 @@ export default function Header() {
       {/* ROW 2: Sub-Navigation Bar (Dark Charcoal #211f1c with Yellow Underline) — Hidden on mobile */}
       <div className="oracle-subnav-bg text-white px-4 sm:px-6 lg:px-8 border-b border-stone-800 hidden sm:block">
         <div className="mx-auto max-w-[1440px] flex items-center justify-between h-12">
-          <nav className="flex items-center gap-4 sm:gap-6 lg:gap-8 text-sm font-semibold h-full overflow-x-auto scrollbar-hide">
+          <nav className="flex items-center gap-4 sm:gap-6 lg:gap-8 text-sm font-semibold h-full overflow-x-auto overflow-y-hidden scrollbar-hide">
             {subNavItems.map((item) => {
               const isActive = activeTab === item.id || openDropdown === item.menuKey;
               return (

@@ -55,6 +55,37 @@
   background-color: #211f1c;
 }
 
+/* Complete Scrollbar Hiding Utility (Chrome, Safari, Edge, Firefox) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none !important; /* IE and Edge */
+  scrollbar-width: none !important; /* Firefox */
+}
+
+/* Global Navigation & Tab Bar Scrollbar Reset */
+nav::-webkit-scrollbar,
+.oracle-subnav-bg nav::-webkit-scrollbar,
+.overflow-x-auto::-webkit-scrollbar,
+.overflow-y-auto::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+nav,
+.oracle-subnav-bg nav,
+.overflow-x-auto,
+.overflow-y-auto {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+
 /* Enterprise Design System Utilities */
 .btn-primary {
   display: inline-flex;
