@@ -103,40 +103,27 @@ export default function HospitalsView() {
               </div>
             </div>
 
-            {/* Right Column: Visual Video Player Card */}
+            {/* Right Column: Visual Video Player Card with PNG Banner */}
             <div className="lg:col-span-5">
               <div 
                 onClick={() => setVideoModalOpen(true)}
-                className="bg-[#f7f9fa] border border-slate-200 rounded-xl p-8 sm:p-12 relative overflow-hidden group cursor-pointer shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-[280px] sm:h-[320px]"
+                className="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200 group cursor-pointer aspect-16/10 sm:aspect-4/3 w-full bg-slate-900"
               >
-                {/* Decorative Red Corner Accent */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#c74634] rounded-bl-full pointer-events-none opacity-90 transform translate-x-8 -translate-y-8 group-hover:scale-110 transition-transform"></div>
+                <img 
+                  src="/axiovital_health_tech_banner.png" 
+                  alt="Axiovital Service for Health Tech Authority Banner" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
 
-                {/* Card Header Content */}
-                <div className="relative z-10 space-y-1">
-                  <span className="text-2xl font-extrabold text-[#c74634] tracking-tight block">
-                    AXIOVITAL
-                  </span>
-                  <span className="text-sm font-bold text-slate-800 tracking-wide uppercase block">
-                    PartnerNetwork
-                  </span>
-                </div>
-
-                {/* Play Button Circle */}
-                <div className="relative z-10 my-auto flex justify-center items-center">
-                  <div className="h-16 w-16 rounded-full bg-[#1f1e1c] text-white flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:bg-[#c74634] transition-all">
+                {/* Interactive Play Overlay Icon */}
+                <div className="absolute inset-0 bg-black/15 group-hover:bg-black/35 transition-colors flex items-center justify-center">
+                  <div className="h-16 w-16 rounded-full bg-[#1f1e1c]/90 text-white flex items-center justify-center shadow-2xl border-2 border-white/80 group-hover:bg-[#c74634] group-hover:scale-110 transition-all">
                     <Play className="h-7 w-7 fill-current ml-1" />
                   </div>
                 </div>
-
-                {/* Card Subtitle Footer */}
-                <div className="relative z-10">
-                  <p className="text-base font-bold text-slate-900">
-                    Choice and Flexibility
-                  </p>
-                </div>
               </div>
             </div>
+
 
           </div>
         </div>
