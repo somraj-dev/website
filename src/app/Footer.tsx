@@ -5,10 +5,8 @@ import { siteConfig } from "./config";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-slate-100 text-slate-700 border-t border-slate-200/80 font-sans">
-      
-      {/* Top Banner Accent Line (Crimson) */}
-      <div className="h-1 w-full bg-[#c74634]" />
+    <footer className="w-full bg-slate-100 text-slate-700 font-sans">
+
 
       {/* Main Footer Container */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
