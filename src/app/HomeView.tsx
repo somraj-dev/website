@@ -8,6 +8,7 @@ import {
 
 export default function HomeView() {
   const [demoModalOpen, setDemoModalOpen] = useState(false);
+  const [videoModalOpen, setVideoModalOpen] = useState(false);
   const [securityTab, setSecurityTab] = useState("hipaa");
 
   return (
@@ -66,7 +67,7 @@ export default function HomeView() {
             {/* Right Column: Healthcare Video Visual Card */}
             <div className="lg:col-span-5">
               <div className="rounded-2xl overflow-hidden shadow-xl border border-slate-200/80 bg-[#0d4253] w-full">
-                <div className="relative aspect-4/3 w-full bg-[#0d4253] overflow-hidden group cursor-pointer" onClick={() => setDemoModalOpen(true)}>
+                <div className="relative aspect-4/3 w-full bg-[#0d4253] overflow-hidden group cursor-pointer" onClick={() => setVideoModalOpen(true)}>
                   <img 
                     src="/oracle_hero_doctor.jpg" 
                     alt="Physician utilizing AxioVital digital healthcare platform during patient consultation" 
@@ -76,7 +77,6 @@ export default function HomeView() {
                     decoding="async"
                     className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500"
                   />
-
 
                   
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0d4253]/90 via-[#0d4253]/30 to-transparent p-6 flex flex-col justify-between">
@@ -100,7 +100,7 @@ export default function HomeView() {
 
                 <div className="p-4 bg-white border-t border-slate-100">
                   <button 
-                    onClick={() => setDemoModalOpen(true)}
+                    onClick={() => setVideoModalOpen(true)}
                     className="text-xs sm:text-sm font-bold text-[#1f1e1c] hover:text-[#c74634] transition-colors flex items-center gap-1 text-left"
                   >
                     Watch Platform Demo: See how AxioVital simplifies care delivery (1:45) <ChevronRight className="h-4 w-4 text-slate-500 shrink-0" />
@@ -112,6 +112,7 @@ export default function HomeView() {
           </div>
         </div>
       </section>
+
 
       {/* SECTION 2: HOW AXIOVITAL SIMPLIFIES HEALTHCARE */}
       <section className="bg-transition-hero-to-body py-16 lg:py-24 relative overflow-hidden">
@@ -462,6 +463,47 @@ export default function HomeView() {
         </div>
       )}
 
+      {/* YOUTUBE VIDEO POPUP MODAL */}
+      {videoModalOpen && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-950/80 backdrop-blur-md transition-all duration-300 animate-in fade-in"
+          onClick={() => setVideoModalOpen(false)}
+        >
+          <div 
+            className="bg-slate-900 rounded-2xl overflow-hidden max-w-5xl w-full shadow-2xl border border-slate-700/80 relative space-y-0 aspect-video flex flex-col"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div className="bg-slate-900 px-4 py-3 flex items-center justify-between border-b border-slate-800 text-white shrink-0">
+              <div className="flex items-center gap-2">
+                <span className="h-2.5 w-2.5 rounded-full bg-[#c74634] animate-pulse" />
+                <span className="text-xs font-bold tracking-wide uppercase text-slate-200">AxioVital Healthcare Demo</span>
+              </div>
+              <button 
+                onClick={() => setVideoModalOpen(false)} 
+                className="text-slate-400 hover:text-white p-1 rounded-lg bg-slate-800 hover:bg-slate-700 transition-colors flex items-center gap-1.5 text-xs font-bold px-2.5 py-1"
+                aria-label="Close Video"
+              >
+                <span>Close</span>
+                <X className="h-4 w-4" />
+              </button>
+            </div>
+
+            {/* Embedded YouTube Player */}
+            <div className="relative w-full flex-grow bg-black">
+              <iframe
+                src="https://www.youtube.com/embed/IT4YSBtV_2w?autoplay=1"
+                title="AxioVital Healthcare Platform Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full border-0"
+              />
+            </div>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 }
+
