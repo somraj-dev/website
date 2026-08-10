@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function SitemapPage() {
   return (
-    <div className="bg-white min-h-screen py-12 px-6 sm:px-12 font-[-apple-system,BlinkMacSystemFont,\"Segoe_UI\",Helvetica,Arial,sans-serif,\"Apple_Color_Emoji\",\"Segoe_UI_Emoji\"] text-[#24292f]">
+    <div className="bg-white min-h-screen py-12 px-6 sm:px-12 font-[-apple-system,BlinkMacSystemFont,'Segoe_UI',Helvetica,Arial,sans-serif,'Apple_Color_Emoji','Segoe_UI_Emoji'] text-[#24292f]">
       <div className="max-w-[1012px] mx-auto space-y-10">
         
         {/* Title */}
