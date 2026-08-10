@@ -2,22 +2,22 @@ import type { Metadata } from "next";
 import { Sparkles, FileText, BarChart2 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "AxioAI Assistant — Clinical Notes & Medical Documentation AI",
-  description: "Automate physician consultation notes, structured diagnosis generation, and ICD-10 coding assistance with the HIPAA-compliant AxioAI Assistant.",
+  title: "Healthcare AI Platform & Clinical Documentation AI | AxioVital",
+  description: "Empower care providers with AxioAI's ambient SOAP transcription, clinical NLP, automated ICD-10 coding, and predictive patient flow models.",
   alternates: {
     canonical: "https://axiovital.quantaforze.com/ai-features",
   },
   openGraph: {
-    title: "AxioAI Assistant — Clinical Notes & Medical Documentation AI",
-    description: "Automate physician consultation notes, structured diagnosis generation, and ICD-10 coding assistance with the HIPAA-compliant AxioAI Assistant.",
+    title: "Healthcare AI Platform & Clinical Documentation AI | AxioVital",
+    description: "Empower care providers with AxioAI's ambient SOAP transcription, clinical NLP, automated ICD-10 coding, and predictive patient flow models.",
     url: "https://axiovital.quantaforze.com/ai-features",
     siteName: "AxioVital Health Platform",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AxioAI Assistant — Clinical Notes & Medical Documentation AI",
-    description: "Automate physician consultation notes, structured diagnosis generation, and ICD-10 coding assistance with the HIPAA-compliant AxioAI Assistant.",
+    title: "Healthcare AI Platform & Clinical Documentation AI | AxioVital",
+    description: "Empower care providers with AxioAI's ambient SOAP transcription, clinical NLP, automated ICD-10 coding, and predictive patient flow models.",
   },
 };
 
@@ -48,7 +48,7 @@ export default function AiFeatures() {
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full">AxioAI Intelligence</span>
           <h1 className="text-4xl font-extrabold text-slate-900 tracking-tight sm:text-5xl">
-            Healthcare NLP & Predictive Models
+            Healthcare AI Platform & Clinical Documentation
           </h1>
           <p className="text-lg text-slate-600">
             Speed up clinical diagnostics and eliminate manual workflows with our secure machine learning framework.

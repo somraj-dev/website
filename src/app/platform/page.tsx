@@ -3,22 +3,22 @@ import Link from "next/link";
 import { Cpu, Shield, Database } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Enterprise Healthcare Platform Architecture & Interoperability",
-  description: "Discover AxioVital's enterprise healthcare platform architecture, designed for unified EHR integration, HIPAA compliance, and real-time care coordination.",
+  title: "Enterprise EHR Platform & FHIR Interoperability Gateway | AxioVital",
+  description: "Unified EHR platform architecture linking legacy EMR databases and FHIR R4 APIs with zero-trust security and real-time health data synchronization.",
   alternates: {
     canonical: "https://axiovital.quantaforze.com/platform",
   },
   openGraph: {
-    title: "Enterprise Healthcare Platform Architecture & Interoperability",
-    description: "Discover AxioVital's enterprise healthcare platform architecture, designed for unified EHR integration, HIPAA compliance, and real-time care coordination.",
+    title: "Enterprise EHR Platform & FHIR Interoperability Gateway | AxioVital",
+    description: "Unified EHR platform architecture linking legacy EMR databases and FHIR R4 APIs with zero-trust security and real-time health data synchronization.",
     url: "https://axiovital.quantaforze.com/platform",
     siteName: "AxioVital Health Platform",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Enterprise Healthcare Platform Architecture & Interoperability",
-    description: "Discover AxioVital's enterprise healthcare platform architecture, designed for unified EHR integration, HIPAA compliance, and real-time care coordination.",
+    title: "Enterprise EHR Platform & FHIR Interoperability Gateway | AxioVital",
+    description: "Unified EHR platform architecture linking legacy EMR databases and FHIR R4 APIs with zero-trust security and real-time health data synchronization.",
   },
 };
 
@@ -49,7 +49,7 @@ export default function Platform() {
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full">Architecture Specs</span>
           <h1 className="text-4xl font-extrabold text-slate-900 tracking-tight sm:text-5xl">
-            The Healthcare Operating System
+            Enterprise EHR Platform & Interoperability Gateway
           </h1>
           <p className="text-lg text-slate-600">
             AxioVital offers enterprise-grade database replication, fast FHIR integrations, and decentralized security structures.

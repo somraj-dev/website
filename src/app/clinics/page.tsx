@@ -2,22 +2,22 @@ import type { Metadata } from "next";
 import { Calendar, UserPlus, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Outpatient Clinic Management Software & Digital Prescriptions",
-  description: "Streamline outpatient clinic workflows, online appointments, digital prescriptions, and patient check-in with AxioVital Clinic OS.",
+  title: "Outpatient Clinic Management Software & Prescriptions | AxioVital",
+  description: "Streamline outpatient clinic appointment booking, patient self check-in, digital prescriptions, and charting workflows with AxioVital Clinic OS.",
   alternates: {
     canonical: "https://axiovital.quantaforze.com/clinics",
   },
   openGraph: {
-    title: "Outpatient Clinic Management Software & Digital Prescriptions",
-    description: "Streamline outpatient clinic workflows, online appointments, digital prescriptions, and patient check-in with AxioVital Clinic OS.",
+    title: "Outpatient Clinic Management Software & Prescriptions | AxioVital",
+    description: "Streamline outpatient clinic appointment booking, patient self check-in, digital prescriptions, and charting workflows with AxioVital Clinic OS.",
     url: "https://axiovital.quantaforze.com/clinics",
     siteName: "AxioVital Health Platform",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Outpatient Clinic Management Software & Digital Prescriptions",
-    description: "Streamline outpatient clinic workflows, online appointments, digital prescriptions, and patient check-in with AxioVital Clinic OS.",
+    title: "Outpatient Clinic Management Software & Prescriptions | AxioVital",
+    description: "Streamline outpatient clinic appointment booking, patient self check-in, digital prescriptions, and charting workflows with AxioVital Clinic OS.",
   },
 };
 
@@ -48,7 +48,7 @@ export default function Clinics() {
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full">For Mid-size Practices</span>
           <h1 className="text-4xl font-extrabold text-slate-900 tracking-tight sm:text-5xl">
-            AxioClinic Management Suite
+            Outpatient Clinic Management Software Suite
           </h1>
           <p className="text-lg text-slate-600">
             Streamline patient registration, minimize charting workloads, and consolidate operational pipelines.
