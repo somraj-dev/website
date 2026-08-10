@@ -137,7 +137,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/sitemap.xml" className="text-slate-600 hover:text-slate-900 transition-colors">
+                <Link href="/sitemap" className="text-slate-600 hover:text-slate-900 transition-colors">
                   Sitemap
                 </Link>
               </li>
