@@ -3,13 +3,14 @@ import Script from "next/script";
 import "./globals.css";
 import Header from "./Header";
 import Footer from "./Footer";
+import { siteConfig } from "./config";
 
 export const metadata: Metadata = {
   title: {
     default: "AxioVital - Enterprise Healthcare Operating System",
     template: "%s | AxioVital"
   },
-  description: "AxioVital is the next-generation, AI-powered healthcare operating system offering security, interoperability, patient access cards, and electronic health record integration.",
+  description: siteConfig.entity.description,
   keywords: ["Healthcare Platform", "Enterprise EHR", "Digital Identity", "AxioVital", "Axio Vital", "AxioVital HealthTech", "AxioVital QuantaForze", "AxioAI"],
 };
 
@@ -27,40 +28,35 @@ export default function RootLayout({
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "AxioVital",
-    "legalName": "AxioVital Health Platform",
-    "alternateName": ["Axio Vital", "AxioVital HealthTech", "AxioVital Healthcare Software", "AxioVital QuantaForze"],
-    "url": "https://axiovital.quantaforze.com",
-    "logo": "https://axiovital.quantaforze.com/oracle_hero_doctor.jpg",
-    "description": "AxioVital is an integrated healthcare technology platform developed and operated by QuantaForze, connecting patients, care providers, clinics, hospitals, and laboratories.",
+    "name": siteConfig.entity.name,
+    "legalName": siteConfig.entity.legalName,
+    "alternateName": siteConfig.entity.alternateNames,
+    "url": siteConfig.entity.url,
+    "logo": siteConfig.entity.logo,
+    "description": siteConfig.entity.description,
     "parentOrganization": {
       "@type": "Organization",
-      "name": "QuantaForze",
-      "url": "https://quantaforze.com"
+      "name": siteConfig.entity.parentOrganization.name,
+      "url": siteConfig.entity.parentOrganization.url
     },
-    "sameAs": [
-      "https://quantaforze.com",
-      "https://www.linkedin.com/company/axiovital",
-      "https://twitter.com/axiovital",
-      "https://github.com/axiovital"
-    ],
+    "sameAs": siteConfig.entity.sameAs,
     "contactPoint": {
       "@type": "ContactPoint",
-      "contactType": "sales",
-      "email": "sales@axiovital.com"
+      "contactType": siteConfig.entity.contactPoint.contactType,
+      "email": siteConfig.entity.contactPoint.email
     }
   };
 
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "AxioVital",
+    "name": siteConfig.entity.name,
     "alternateName": "Axio Vital",
-    "url": "https://axiovital.quantaforze.com",
+    "url": siteConfig.entity.url,
     "publisher": {
       "@type": "Organization",
-      "name": "QuantaForze",
-      "url": "https://quantaforze.com"
+      "name": siteConfig.entity.parentOrganization.name,
+      "url": siteConfig.entity.parentOrganization.url
     }
   };
 

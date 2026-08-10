@@ -4,6 +4,32 @@ export const siteConfig = {
   operatorUrl: "https://quantaforze.com",
   url: "https://axiovital.quantaforze.com",
   description: "Transforming Healthcare Through Intelligent Digital Care & Connected Ecosystems by QuantaForze",
+  entity: {
+    name: "AxioVital",
+    legalName: "AxioVital Health Platform",
+    alternateNames: ["Axio Vital", "AxioVital HealthTech", "AxioVital Healthcare Software", "AxioVital QuantaForze"],
+    url: "https://axiovital.quantaforze.com",
+    category: "Healthcare Technology / HealthTech Software",
+    description: "AxioVital is an integrated healthcare technology platform developed and operated by QuantaForze, connecting patients, care providers, clinics, hospitals, and diagnostic laboratories.",
+    parentOrganization: {
+      name: "QuantaForze",
+      url: "https://quantaforze.com",
+      relationship: "developed and operated by"
+    },
+    logo: "https://axiovital.quantaforze.com/oracle_hero_doctor.jpg",
+    sameAs: [
+      "https://quantaforze.com",
+      "https://www.linkedin.com/company/axiovital",
+      "https://twitter.com/axiovital",
+      "https://github.com/axiovital"
+    ],
+    contactPoint: {
+      contactType: "sales",
+      email: "sales@axiovital.com",
+      supportEmail: "support@axiovital.quantaforze.com"
+    }
+  },
+
 
   megaMenu: {
     solutions: {
