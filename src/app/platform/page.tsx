@@ -1,7 +1,26 @@
-"use client";
-
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Cpu, Shield, Database } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Enterprise Healthcare Platform Architecture & Interoperability",
+  description: "Discover AxioVital's enterprise healthcare platform architecture, designed for unified EHR integration, HIPAA compliance, and real-time care coordination.",
+  alternates: {
+    canonical: "https://axiovital.quantaforze.com/platform",
+  },
+  openGraph: {
+    title: "Enterprise Healthcare Platform Architecture & Interoperability",
+    description: "Discover AxioVital's enterprise healthcare platform architecture, designed for unified EHR integration, HIPAA compliance, and real-time care coordination.",
+    url: "https://axiovital.quantaforze.com/platform",
+    siteName: "AxioVital Health Platform",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Enterprise Healthcare Platform Architecture & Interoperability",
+    description: "Discover AxioVital's enterprise healthcare platform architecture, designed for unified EHR integration, HIPAA compliance, and real-time care coordination.",
+  },
+};
 
 export default function Platform() {
   const layers = [

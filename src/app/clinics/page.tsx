@@ -1,6 +1,25 @@
-"use client";
+import type { Metadata } from "next";
+import { Calendar, UserPlus, Sparkles } from "lucide-react";
 
-import { Calendar, UserPlus, CheckSquare, Sparkles } from "lucide-react";
+export const metadata: Metadata = {
+  title: "Outpatient Clinic Management Software & Digital Prescriptions",
+  description: "Streamline outpatient clinic workflows, online appointments, digital prescriptions, and patient check-in with AxioVital Clinic OS.",
+  alternates: {
+    canonical: "https://axiovital.quantaforze.com/clinics",
+  },
+  openGraph: {
+    title: "Outpatient Clinic Management Software & Digital Prescriptions",
+    description: "Streamline outpatient clinic workflows, online appointments, digital prescriptions, and patient check-in with AxioVital Clinic OS.",
+    url: "https://axiovital.quantaforze.com/clinics",
+    siteName: "AxioVital Health Platform",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Outpatient Clinic Management Software & Digital Prescriptions",
+    description: "Streamline outpatient clinic workflows, online appointments, digital prescriptions, and patient check-in with AxioVital Clinic OS.",
+  },
+};
 
 export default function Clinics() {
   const capabilities = [

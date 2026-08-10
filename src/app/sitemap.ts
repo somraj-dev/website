@@ -125,7 +125,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+
+    // HTML Sitemap
+    {
+      url: `${BASE_URL}/sitemap`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.2,
+    },
   ];
 
   return routes;
 }
+

@@ -1,6 +1,25 @@
-"use client";
+import type { Metadata } from "next";
+import { FlaskConical, CheckCircle } from "lucide-react";
 
-import { Activity, Database, CheckCircle, FlaskConical } from "lucide-react";
+export const metadata: Metadata = {
+  title: "Laboratory Information System & Diagnostic Integration Gateway",
+  description: "Automate diagnostic test result delivery, link lab reports to patient portals, and integrate directly with hospital EMRs via AxioVital.",
+  alternates: {
+    canonical: "https://axiovital.quantaforze.com/laboratories",
+  },
+  openGraph: {
+    title: "Laboratory Information System & Diagnostic Integration Gateway",
+    description: "Automate diagnostic test result delivery, link lab reports to patient portals, and integrate directly with hospital EMRs via AxioVital.",
+    url: "https://axiovital.quantaforze.com/laboratories",
+    siteName: "AxioVital Health Platform",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Laboratory Information System & Diagnostic Integration Gateway",
+    description: "Automate diagnostic test result delivery, link lab reports to patient portals, and integrate directly with hospital EMRs via AxioVital.",
+  },
+};
 
 export default function Laboratories() {
   const steps = [

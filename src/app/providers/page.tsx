@@ -1,7 +1,25 @@
-"use client";
+import type { Metadata } from "next";
+import { UserCheck, MessageSquare, Clipboard, Star } from "lucide-react";
 
-import Link from "next/link";
-import { UserCheck, Award, MessageSquare, Clipboard, Star } from "lucide-react";
+export const metadata: Metadata = {
+  title: "Physician & Care Provider Workspace Solutions",
+  description: "Empower care providers with instant patient medical history access, electronic health records, AI consultation notes, and digital prescriptions.",
+  alternates: {
+    canonical: "https://axiovital.quantaforze.com/providers",
+  },
+  openGraph: {
+    title: "Physician & Care Provider Workspace Solutions",
+    description: "Empower care providers with instant patient medical history access, electronic health records, AI consultation notes, and digital prescriptions.",
+    url: "https://axiovital.quantaforze.com/providers",
+    siteName: "AxioVital Health Platform",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Physician & Care Provider Workspace Solutions",
+    description: "Empower care providers with instant patient medical history access, electronic health records, AI consultation notes, and digital prescriptions.",
+  },
+};
 
 export default function Providers() {
   const values = [

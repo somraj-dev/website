@@ -1,6 +1,25 @@
-"use client";
+import type { Metadata } from "next";
+import { CreditCard, ShieldAlert, Cpu, Database, Smartphone } from "lucide-react";
 
-import { CreditCard, ShieldAlert, Cpu, Heart, Database, Smartphone } from "lucide-react";
+export const metadata: Metadata = {
+  title: "AxioVital Product Suite — AXIO-ID, Smart Cards & AxioAI",
+  description: "Explore AxioVital's product suite including AXIO-ID, AXIO Smart NFC Cards, AxioAI Assistant, AxioInsights Analytics, and AxioConnect FHIR Engine.",
+  alternates: {
+    canonical: "https://axiovital.quantaforze.com/products",
+  },
+  openGraph: {
+    title: "AxioVital Product Suite — AXIO-ID, Smart Cards & AxioAI",
+    description: "Explore AxioVital's product suite including AXIO-ID, AXIO Smart NFC Cards, AxioAI Assistant, AxioInsights Analytics, and AxioConnect FHIR Engine.",
+    url: "https://axiovital.quantaforze.com/products",
+    siteName: "AxioVital Health Platform",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AxioVital Product Suite — AXIO-ID, Smart Cards & AxioAI",
+    description: "Explore AxioVital's product suite including AXIO-ID, AXIO Smart NFC Cards, AxioAI Assistant, AxioInsights Analytics, and AxioConnect FHIR Engine.",
+  },
+};
 
 export default function Products() {
   const products = [

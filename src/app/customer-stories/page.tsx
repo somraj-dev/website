@@ -1,6 +1,24 @@
-"use client";
+import type { Metadata } from "next";
 
-import { Award, Heart, MessageSquare } from "lucide-react";
+export const metadata: Metadata = {
+  title: "Healthcare Customer Stories & Operational Case Studies",
+  description: "Read how top hospital networks and clinical facilities reduced patient wait times by 80% and digitized care operations with AxioVital.",
+  alternates: {
+    canonical: "https://axiovital.quantaforze.com/customer-stories",
+  },
+  openGraph: {
+    title: "Healthcare Customer Stories & Operational Case Studies",
+    description: "Read how top hospital networks and clinical facilities reduced patient wait times by 80% and digitized care operations with AxioVital.",
+    url: "https://axiovital.quantaforze.com/customer-stories",
+    siteName: "AxioVital Health Platform",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Healthcare Customer Stories & Operational Case Studies",
+    description: "Read how top hospital networks and clinical facilities reduced patient wait times by 80% and digitized care operations with AxioVital.",
+  },
+};
 
 export default function CustomerStories() {
   const stories = [

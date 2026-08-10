@@ -5,7 +5,27 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: "*",
-        allow: "/",
+        allow: [
+          "/",
+          "/platform",
+          "/hospitals",
+          "/clinics",
+          "/providers",
+          "/laboratories",
+          "/patients",
+          "/products",
+          "/solutions",
+          "/ai-features",
+          "/pricing",
+          "/about",
+          "/careers",
+          "/customer-stories",
+          "/resources",
+          "/documentation",
+          "/support",
+          "/contact",
+          "/sitemap",
+        ],
         disallow: [
           "/login",
           "/register",
@@ -14,9 +34,13 @@ export default function robots(): MetadataRoute.Robots {
           "/api/",
           "/private/",
           "/account/",
+          "/records/",
+          "/search",
+          "/query",
         ],
       },
     ],
     sitemap: "https://axiovital.quantaforze.com/sitemap.xml",
   };
 }
+

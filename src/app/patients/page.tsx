@@ -1,6 +1,25 @@
-"use client";
+import type { Metadata } from "next";
+import { CreditCard, Smartphone, ShieldAlert } from "lucide-react";
 
-import { CreditCard, Smartphone, ShieldAlert, HeartHandshake } from "lucide-react";
+export const metadata: Metadata = {
+  title: "MyHealthcare Patient Portal & Digital Health Access Cards",
+  description: "Manage your medical profile, book appointments, track clinical histories, and control diagnostic access with the MyHealthcare Patient Companion App.",
+  alternates: {
+    canonical: "https://axiovital.quantaforze.com/patients",
+  },
+  openGraph: {
+    title: "MyHealthcare Patient Portal & Digital Health Access Cards",
+    description: "Manage your medical profile, book appointments, track clinical histories, and control diagnostic access with the MyHealthcare Patient Companion App.",
+    url: "https://axiovital.quantaforze.com/patients",
+    siteName: "AxioVital Health Platform",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MyHealthcare Patient Portal & Digital Health Access Cards",
+    description: "Manage your medical profile, book appointments, track clinical histories, and control diagnostic access with the MyHealthcare Patient Companion App.",
+  },
+};
 
 export default function Patients() {
   const patientSolutions = [

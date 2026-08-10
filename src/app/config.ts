@@ -1,6 +1,10 @@
 export const siteConfig = {
   name: "AxioVital Health Platform",
-  description: "Transforming Healthcare Through Intelligent Digital Care & Connected Ecosystems",
+  operator: "QuantaForze",
+  operatorUrl: "https://quantaforze.com",
+  url: "https://axiovital.quantaforze.com",
+  description: "Transforming Healthcare Through Intelligent Digital Care & Connected Ecosystems by QuantaForze",
+
   megaMenu: {
     solutions: {
       category: "Healthcare Segments",

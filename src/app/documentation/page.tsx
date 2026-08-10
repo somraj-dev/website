@@ -1,23 +1,88 @@
-"use client";
-
+import type { Metadata } from "next";
 import Link from "next/link";
 
+export const metadata: Metadata = {
+  title: "Developer API Documentation & FHIR Integration Gateway",
+  description: "Explore AxioVital API specs, HL7/FHIR record integration guides, identity token authentication, and Webhook events for developers.",
+  alternates: {
+    canonical: "https://axiovital.quantaforze.com/documentation",
+  },
+  openGraph: {
+    title: "Developer API Documentation & FHIR Integration Gateway",
+    description: "Explore AxioVital API specs, HL7/FHIR record integration guides, identity token authentication, and Webhook events for developers.",
+    url: "https://axiovital.quantaforze.com/documentation",
+    siteName: "AxioVital Health Platform",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Developer API Documentation & FHIR Integration Gateway",
+    description: "Explore AxioVital API specs, HL7/FHIR record integration guides, identity token authentication, and Webhook events for developers.",
+  },
+};
+
 export default function Documentation() {
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "AxioVital Developer Documentation — Build knowledge agents without embeddings",
+    "description": "Explore AxioVital API specs, HL7/FHIR record integration guides, identity token authentication, and Webhook events for developers.",
+    "author": [
+      { "@type": "Person", "name": "Ben Sabic" },
+      { "@type": "Person", "name": "Hugo Richard" }
+    ],
+    "datePublished": "2026-07-11",
+    "publisher": {
+      "@type": "Organization",
+      "name": "QuantaForze",
+      "url": "https://quantaforze.com"
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Resources",
+        "item": "https://axiovital.quantaforze.com/resources"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Documentation",
+        "item": "https://axiovital.quantaforze.com/documentation"
+      }
+    ]
+  };
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
     <div className="bg-white min-h-screen text-[#171717] font-sans antialiased selection:bg-[#0070f3] selection:text-white">
       {/* Article Container */}
       <article className="max-w-[700px] mx-auto px-6 pt-12 pb-24 space-y-10">
         
         {/* Breadcrumbs */}
         <div className="flex items-center gap-1.5 text-[13px] text-[#666666] font-medium tracking-tight">
-          <Link href="/blog" className="hover:text-black transition-colors">Blog</Link>
+          <Link href="/resources" className="hover:text-black transition-colors">Resources</Link>
           <span>/</span>
           <span className="text-[#888888]">Field Engineering</span>
         </div>
 
         {/* Title */}
         <h1 className="text-[36px] sm:text-[44px] font-bold text-black tracking-tight leading-[1.1] font-sans">
-          Build knowledge agents without embeddings
+          AxioVital Developer Documentation
         </h1>
 
         {/* Author / Date info */}
@@ -46,11 +111,11 @@ export default function Documentation() {
           </p>
           
           <p>
-            We kept seeing this pattern internally and for teams building agents on Vercel. The embedding stack works for semantic similarity, but it falls short when you need a specific value from structured data. The failure mode is silent: the agent confidently returns the wrong chunk, and you can't trace the path from question to answer.
+            We kept seeing this pattern internally and for teams building agents on Vercel. The embedding stack works for semantic similarity, but it falls short when you need a specific value from structured data. The failure mode is silent: the agent confidently returns the wrong chunk, and you can&apos;t trace the path from question to answer.
           </p>
           
           <p>
-            That's why we tried something different. We replaced our vector pipeline with a filesystem and gave the agent <code className="bg-[#fafafa] border border-[#eaeaea] text-[#eb5757] font-mono text-[13px] px-1.5 py-0.5 rounded">bash</code>. Our <span className="underline decoration-dotted cursor-pointer hover:text-black">sales call summarization agent</span> went from ~$1.00 to ~$0.25 per call, and the output quality improved. The agent was doing what it already knew how to do: read files, run <code className="bg-[#fafafa] border border-[#eaeaea] text-[#eb5757] font-mono text-[13px] px-1.5 py-0.5 rounded">grep</code>, and navigate directories.
+            That&apos;s why we tried something different. We replaced our vector pipeline with a filesystem and gave the agent <code className="bg-[#fafafa] border border-[#eaeaea] text-[#eb5757] font-mono text-[13px] px-1.5 py-0.5 rounded">bash</code>. Our <span className="underline decoration-dotted cursor-pointer hover:text-black">sales call summarization agent</span> went from ~$1.00 to ~$0.25 per call, and the output quality improved. The agent was doing what it already knew how to do: read files, run <code className="bg-[#fafafa] border border-[#eaeaea] text-[#eb5757] font-mono text-[13px] px-1.5 py-0.5 rounded">grep</code>, and navigate directories.
           </p>
           
           <p>
@@ -155,5 +220,7 @@ export default function Documentation() {
 
       </article>
     </div>
+    </>
   );
 }
+

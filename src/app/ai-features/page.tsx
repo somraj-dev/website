@@ -1,6 +1,25 @@
-"use client";
+import type { Metadata } from "next";
+import { Sparkles, FileText, BarChart2 } from "lucide-react";
 
-import { Sparkles, FileText, BarChart2, CheckCircle2 } from "lucide-react";
+export const metadata: Metadata = {
+  title: "AxioAI Assistant — Clinical Notes & Medical Documentation AI",
+  description: "Automate physician consultation notes, structured diagnosis generation, and ICD-10 coding assistance with the HIPAA-compliant AxioAI Assistant.",
+  alternates: {
+    canonical: "https://axiovital.quantaforze.com/ai-features",
+  },
+  openGraph: {
+    title: "AxioAI Assistant — Clinical Notes & Medical Documentation AI",
+    description: "Automate physician consultation notes, structured diagnosis generation, and ICD-10 coding assistance with the HIPAA-compliant AxioAI Assistant.",
+    url: "https://axiovital.quantaforze.com/ai-features",
+    siteName: "AxioVital Health Platform",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AxioAI Assistant — Clinical Notes & Medical Documentation AI",
+    description: "Automate physician consultation notes, structured diagnosis generation, and ICD-10 coding assistance with the HIPAA-compliant AxioAI Assistant.",
+  },
+};
 
 export default function AiFeatures() {
   const models = [

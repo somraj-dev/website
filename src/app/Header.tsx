@@ -153,7 +153,8 @@ export default function Header() {
 
             {/* Authentic Indian Flag Graphic SVG */}
             <div className="flex items-center gap-1.5 cursor-pointer hover:opacity-90 transition-opacity" title="India Region (EN-IN)">
-              <svg className="h-4 w-6 rounded-xs shadow-xs border border-slate-300 overflow-hidden" viewBox="0 0 900 600">
+              <svg className="h-4 w-6 rounded-xs shadow-xs border border-slate-300 overflow-hidden" viewBox="0 0 900 600" aria-hidden="true">
+
                 <rect width="900" height="200" fill="#FF9933"/>
                 <rect y="200" width="900" height="200" fill="#FFFFFF"/>
                 <rect y="400" width="900" height="200" fill="#138808"/>

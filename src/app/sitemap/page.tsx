@@ -1,6 +1,25 @@
-"use client";
-
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "AxioVital Website Directory & Navigation Sitemap",
+  description: "Browse the complete directory of AxioVital platform pages, healthcare solutions, products, documentation, and resources.",
+  alternates: {
+    canonical: "https://axiovital.quantaforze.com/sitemap",
+  },
+  openGraph: {
+    title: "AxioVital Website Directory & Navigation Sitemap",
+    description: "Browse the complete directory of AxioVital platform pages, healthcare solutions, products, documentation, and resources.",
+    url: "https://axiovital.quantaforze.com/sitemap",
+    siteName: "AxioVital Health Platform",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AxioVital Website Directory & Navigation Sitemap",
+    description: "Browse the complete directory of AxioVital platform pages, healthcare solutions, products, documentation, and resources.",
+  },
+};
 
 export default function SitemapPage() {
   return (
