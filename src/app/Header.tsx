@@ -177,8 +177,8 @@ export default function Header() {
               </svg>
             </div>
 
-            {/* User Icon */}
-            <Link href="/patients" className="hover:text-slate-900 transition-colors p-1" title="User Portal">
+            {/* User Icon - Request Appointment & Profile */}
+            <Link href="/profile" className="hover:text-slate-900 transition-colors p-1" title="Request Appointment & Patient Profile">
               <User className="h-5 w-5 stroke-[1.8]" />
             </Link>
 

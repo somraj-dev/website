@@ -38,7 +38,7 @@ This document serves as the project's single source of truth for all public enti
 
 ---
 
-## 4. Primary Indexable Canonical URLs (19 Public Endpoints)
+## 4. Primary Indexable Canonical URLs (20 Public Endpoints)
 
 1. **Homepage:** `https://axiovital.quantaforze.com/`
 2. **Platform & Architecture:** `https://axiovital.quantaforze.com/platform`
@@ -59,6 +59,7 @@ This document serves as the project's single source of truth for all public enti
 17. **Support & Helpdesk:** `https://axiovital.quantaforze.com/support`
 18. **Contact Sales:** `https://axiovital.quantaforze.com/contact`
 19. **HTML Sitemap Directory:** `https://axiovital.quantaforze.com/sitemap`
+20. **Request Appointment & Profile:** `https://axiovital.quantaforze.com/profile`
 
 ---
 

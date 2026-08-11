@@ -25,6 +25,7 @@ export default function robots(): MetadataRoute.Robots {
           "/support",
           "/contact",
           "/sitemap",
+          "/profile",
         ],
         disallow: [
           "/login",
